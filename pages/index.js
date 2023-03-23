@@ -7,7 +7,7 @@ import Testimonials from "@/features/Home/components/Testimonials";
 import DefaultLayout from "@/features/Layouts/DefaultLayout";
 
 export default function Home({ featuredProperties }) {
-  console.log(featuredProperties);
+ 
   return (
     <DefaultLayout>
       <HeroBanner />
@@ -18,20 +18,19 @@ export default function Home({ featuredProperties }) {
     </DefaultLayout>
   );
 };
+
 //API FETCH
-/*
+
 export async function getStaticProps() {
-  const properties = await getProperties(5)
+  const properties = await getProperties(5);
 
   return {
-    props: {featuredProperties : properties}
+    props: { featuredProperties: properties }
   };
-} ;
-*/
+}
 
-
-// For An InCode Data
-
+// For A Given JSON Data
+/*
 export async function getStaticProps() {
   const { hits } = require("@/features/data/properties");
 
@@ -39,3 +38,4 @@ export async function getStaticProps() {
     props: {featuredProperties : hits.slice(0, 5)}
   };
 }
+*/

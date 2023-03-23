@@ -87,8 +87,8 @@ const PropertySingle = ( { property }) => {
                 color="gray.600"
                 fontSize="1rem"
               >
-                {amenities.length ? amenities.map((item) => <Text>{item}</Text>) : "Please contact us for more info"}
-              </SimpleGrid>
+             {amenities.length ? amenities.map((item) => <Text>{item.text}</Text>) : "Please contact us for more info"} 
+              </SimpleGrid> 
             </TextContentBox>
           </GridItem>
           <GridItem colSpan={{base: "6", sm: "3"}}>
@@ -110,7 +110,7 @@ const PropertySingle = ( { property }) => {
 export default PropertySingle;
 
 //API FETCH
-/*
+
 export async function getServerSideProps(context) {
   const { id } = context.query;
   const property = await getProperty(id);
@@ -118,14 +118,14 @@ export async function getServerSideProps(context) {
   return {
     props: { property: property }
   };
-};
-*/
+}
 
-// For An InCode Data
-
+// For A Given JSON Data
+/*
 export async function getServerSideProps(context) {
     const property = require('@/features/data/property')
     return {
         props: { property }
     };
-};
+}
+*/

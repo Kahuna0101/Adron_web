@@ -20,11 +20,9 @@ export const usePropertyFormat = (property) => {
     const coverVideoUrl = property.coverVideo.url;
     const coverVideo = coverVideoUrl.slice(coverVideoUrl.length - 11);
     const panorama = property.panoramas?.length? property.panoramas[0].url : [];
-    const amenities = property.amenities
-        ?.flatMap(({amenities}) => amenities)
-        .map((item) => item.text);
+    const amenities = property.amenities?.flatMap(({amenities}) => amenities).map((item) => item);
     const furnished = property.furnishingStatus;
-
+    
   return {
         address,
         coverPhoto,

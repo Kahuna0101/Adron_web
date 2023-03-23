@@ -26,19 +26,21 @@ const Properties = ({properties}) => {
 export default Properties;
 
 //API FETCH
-/*
-export async function getStaticProps(){
+
+export async function getStaticProps() {
     const properties = await getProperties(20);
     return {
       props: { properties: properties }
     };
-};
-*/
+}
 
-// For A Given Data
+
+// For A Given JSON Data
+/*
 export async function getStaticProps(){
     const { hits } = require("@/features/data/properties");
     return {
       props: { properties: hits }
     };
 };
+*/
