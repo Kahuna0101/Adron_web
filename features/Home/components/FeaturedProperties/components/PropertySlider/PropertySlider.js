@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import PropertyCard from "@/features/common/modules/PropertyCard";
 import { useIsDesktop } from "@/features/common/Hooks/useIsDesktop";
 
+
 const PropertySlider = ({ featuredProperties }) => {
   const { isDesktop } = useIsDesktop();
   return (
@@ -14,7 +15,6 @@ const PropertySlider = ({ featuredProperties }) => {
       slidesPerView={isDesktop ? 3 : 1} 
       spaceBetween={10}
       loop={true}
-      loopFillGroupWithBlank={true}
       centeredSlides={true}
       autoplay={{delay: 2000, disableOnInteraction: true}}
       pagination={{ dynamicBullets: true}}

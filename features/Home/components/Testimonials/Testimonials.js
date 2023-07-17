@@ -5,12 +5,11 @@ const { Box, Text, SimpleGrid, Image } = require("@chakra-ui/react")
 
 const Testimonials = () => {
   return (
-    <Box
-      backgroundColor="whatsapp.50">
+    <Box>
         <Box 
-          maxWidth="1280px" 
+          width="100%" 
           margin="0 auto"
-          paddingY={{base:"3rem", sm:"6rem"}}
+          padding={{base:"3rem", sm:"9rem"}}
         >
           <Text
             fontSize={{base:"4xl", sm:"5xl"}}

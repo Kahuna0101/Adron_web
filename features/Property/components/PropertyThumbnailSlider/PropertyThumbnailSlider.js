@@ -26,11 +26,12 @@ const PropertyThumbnailSlider = ({ photos }) => {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
         >
-            {photos.map((image) => (
-                <SwiperSlide key={image}>
-                    <img src={image}/>
-                </SwiperSlide>
-            ))}
+          {photos.map((image) => (
+            <SwiperSlide key={image}>
+              <img src={image}/>
+            </SwiperSlide>
+          ))}
+
         </Swiper>
         <Divider marginY="1rem"/>
         <Swiper
@@ -43,11 +44,12 @@ const PropertyThumbnailSlider = ({ photos }) => {
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper"
         >
-            {photos.map((image) => (
-                <SwiperSlide key={image}>
-                    <img src={image}/>
-                </SwiperSlide>
-            ))}
+          {photos.map((image) => (
+            <SwiperSlide key={image}>
+              <img src={image}/>
+            </SwiperSlide>
+          ))}
+                
         </Swiper>
       </>
   )

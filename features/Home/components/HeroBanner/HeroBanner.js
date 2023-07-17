@@ -1,18 +1,56 @@
 import { Box, Fade, Text } from "@chakra-ui/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { Parallax, Pagination, Navigation, Autoplay } from "swiper";
+import BannerCard from "@/features/common/modules/BannerCard";
 import HeroForm from "../HeroForm";
 
 const HeroBanner = () => {
   return (
-    <Fade in>
-     <Box 
+    <Box>
+       <Swiper 
+        slidesPerView={1}
+        loop={true}
+        autoplay={{delay: 5000, disableOnInteraction: true}}
+        pagination={{ clickable:"true"}}
+        modules={[Pagination, Autoplay]}
+        className="mySwiper"
+      >
+        <SwiperSlide >
+            <BannerCard />
+        </SwiperSlide>
+        <SwiperSlide >
+            <BannerCard />
+        </SwiperSlide>
+        </Swiper>
+    </Box>
+  )
+}
+
+export default HeroBanner;
+
+
+
+
+
+
+
+
+/*<Box 
     position="relative" 
-    minHeight={{base:"110vh", sm:"60vh"}}
+    minHeight={{base:"110vh", sm:"90vh"}}
     backgroundImage={`url('./hero/herogb.jpeg')`}
     backgroundPosition="center"
     backgroundSize="cover"
     backgroundAttachment="fixed"
     >
-      <Box
+      
+    </Box> 
+    <Box
         position="absolute"
         width="100%"
         height="100%"
@@ -21,7 +59,7 @@ const HeroBanner = () => {
       />
       <Box display="flex" flexDirection={{base:"column", sm:"row"}}
         alignItems="center" justifyContent={{base:"flex-start", sm:"space-between"}}
-        maxWidth="1280px"
+        width="100%"
         position="absolute"
         color="white"
         fontWeight="light"
@@ -41,11 +79,4 @@ const HeroBanner = () => {
           </Text>
         </Box>
         <Box width={{base:"100%", sm:"auto"}} marginTop={{base:"2rem", sm:"0"}}><HeroForm /></Box>
-      </Box>
-    </Box> 
-    </Fade>
-    
-  )
-}
-
-export default HeroBanner;
+      </Box> */

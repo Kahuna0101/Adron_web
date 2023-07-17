@@ -1,38 +1,33 @@
 import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { HiHomeModern } from "react-icons/hi2";
-import { services, about, ourOffices, workWithUs } from "./footerConsts";
+import { workWithUs, contactUs } from "./footerConsts";
 
 const Footer = () => {
   return (
-   <Box backgroundColor="whatsapp.600">
-    <Box
-      maxWidth="1280px"
-      margin="0 auto"
-      paddingY="3rem"
-      paddingX={{ base: "2rem", sm: "0" }}
-      >
+    <>
+   <Box backgroundColor="whatsapp.600" width="100%" margin="0 auto"
+      padding={{base:"1rem 2rem", sm:"8rem 3rem"}} display={{ base:"row", sm:"column"}}>
         <SimpleGrid
           column="4"
-          color="whiteAlpha.700"
-          gap="1.7rem"
-          minChildWidth="150px"
+          color="black.700"
+          gap={{ base: "1rem", sm: "3rem"}}
+          minChildWidth={{ base: "none", sm: "50px" }}
         >
-          <Flex flexDirection="column">
-            <FooterHeader title="Services"/>
-            {services.map((item) => (
-              <FooterLink key={item.name} {...item}/>
-            ))}
+          <Flex display={{ base:"none", sm:'block'}}>
+            <Link href="/">
+              <img src="../logo/logo.png" alt="Adron Homes" width="150px" height="50px"/>
+            </Link>
           </Flex>
           <Flex flexDirection="column">
-            <FooterHeader title="About"/>
-            {about.map((item) => (
-              <FooterLink key={item.name} {...item}/>
-            ))}
+            <FooterHeader title="About Adron"/>
+            <FooterHeader title="Our Mission"/>
+            <FooterParagraph paragraph="We are daily driven to keep our promise of affordable housing products with a singular mission to exceed expectations." />
           </Flex>
           <Flex flexDirection="column">
-            <FooterHeader title="Our Offices"/>
-            {ourOffices.map((item) => (
+            <FooterHeader title="Contact Us"/>
+            <FooterParagraph paragraph="For Complaints and enquiries you can reach us on any of the numbers or visit our head office at:" />
+            {contactUs.map((item) => (
               <FooterLink key={item.name} {...item}/>
             ))}
           </Flex>
@@ -56,31 +51,42 @@ const Footer = () => {
         <Box display="flex" alignItems="center" gap="2">
           <HiHomeModern />
           <Text fontSize="lg" fontWeight="black">
-            KAHUNA
+            ADRON HOMES
           </Text>
         </Box>
         <Text marginTop="1rem" fontSize="xs" textAlign="center">
-          All rights reserved - Copyright KAHUNA
+          © Adron Homes. All rights reserved.
         </Text>
-      </Box>
    </Box>
+   </>
   );
 };
 
 export default Footer;
 
-const FooterLink = ({ name, link}) => {
+const FooterLink = ({ name, link, icon}) => {
   return (
-    <Text>
-      <Link href={link}>{name}</Link>
-    </Text>
+      <Link href={link}>
+        <Flex alignItems="center" gap=".5rem" fontSize="medium" fontWeight="500" mb="1rem" color="#1e2022">
+          {icon}
+          {name}
+        </Flex>
+      </Link>
   );
 };
 
 const FooterHeader = ({title}) => {
   return (
-    <Text as="h4" fontWeight="light" fontSize="xl" marginBottom="1rem">
+    <Text as="h4" fontWeight="500" fontSize="2xl" marginBottom=".5rem" color="#1e2022">
       {title}
     </Text>
   );
 };
+
+const FooterParagraph = ({paragraph}) => {
+  return (
+    <Text fontWeight="500" fontSize="medium" color="#fff" mb="1.5rem">
+      {paragraph}
+    </Text>
+  )
+}

@@ -8,6 +8,7 @@ const TestimonialCard = ({ name, image, company, testimonial}) => {
       padding="3rem"
       display="flex"
       flexDirection="column"
+      boxShadow="0 0 20px rgba(225, 225, 225, 0.7)"
       marginBottom={{ base:"1rem", sm:"0" }}
     >
        <Box>

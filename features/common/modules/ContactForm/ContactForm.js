@@ -1,4 +1,4 @@
-import { Box, Button, Checkbox, Flex, FormControl, Input, Text, Textarea } from "@chakra-ui/react";
+import { Box, Button, Checkbox, FormControl, Input, Text, Textarea } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
@@ -50,13 +50,14 @@ const ContactForm = () => {
                 />
                 <Checkbox 
                   marginTop="1.3rem" 
-                  id="ngn" 
+                  id="consent" 
                   type="checkbox"
-                  placeholder="NGN"
-                  {...register("ngn", { required: true })}
+                  placeholder="consent"
+                  color="gray"
+                  {...register("consent", { required: true })}
                 >
                    <Text fontSize="0.8rem" color="gray.500">
-                     I consent to having this website store my details for future communications
+                     I consent to having Adron Homes store my details for future communications
                     </Text>
                 </Checkbox>
             </FormControl>
@@ -66,8 +67,10 @@ const ContactForm = () => {
               fontSize="xl" 
               padding="2rem" 
               marginTop="2rem"
+              width="100%"
+              textAlign="center"
             >
-                Send Message
+                Submit
             </Button>
         </form>
     </Box>

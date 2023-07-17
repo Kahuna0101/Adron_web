@@ -1,30 +1,16 @@
-export const services = [
-    { name: "Our Services", link: "/our-services" },
-    { name: "Meet The Team", link: "/meet-the-team" },
-    { name: "Careers at Casaz", link: "/careers-at-casaz" },
-    { name: "Latest News & Videos", link: "/latest-news" }
+import { HiPhoneArrowUpRight,  } from "react-icons/hi2";
+import { MdLocationOn, MdEmail } from "react-icons/md";
+
+export const contactUs = [
+    { name: "75B Adeyemo Akapo, Omole Phase 1. Ikeja, Lagos state", link: "https://goo.gl/maps/LmC6gC65kjZh86k1A", icon: <MdLocationOn /> },
+    { name: "+2349058590355", link: "tel:+2349058590355", icon: <HiPhoneArrowUpRight /> },
+    { name: "+2349058590357", link: "tel:+2349058590357", icon: <HiPhoneArrowUpRight /> },
+    { name: "+2349058590356", link: "tel:+2349058590356", icon: <HiPhoneArrowUpRight /> },
+    { name: "clientservice@adronhomesproperties.com", link: "mailto:clientservice@adronhomesproperties.com", icon: <MdEmail/> },
   ];
-  
-  export const about = [
-    { name: "Buy", link: "/buy" },
-    { name: "Rent", link: "/rent" },
-    { name: "Commercial", link: "/commercial" },
-    { name: "Mortgage Services", link: "/mortgage-services" },
-    { name: "Property Management", link: "/property-management" }
-  ];
-  
+
   export const workWithUs = [
-    { name: "Off-Plan", link: "/off-plan" },
-    { name: "Holiday Homes", link: "/holiday-homes" },
-    { name: "Home Maintenance", link: "/home-maintenance" },
-    { name: "Sell with us", link: "/sell-with-us" },
-    { name: "Let with us", link: "/let-with-us" }
-  ];
-  
-  export const ourOffices = [
-    { name: "Business Bay", link: "/office/business-bay" },
-    { name: "Jumeirah Golf Estates", link: "/office/jumeirah-golf-estates" },
-    { name: "The Springs", link: "/office/the-springs" },
-    { name: "Motor City", link: "/office/motor-city" },
-    { name: "Palm Jumeirah", link: "/office/palm-jumeirah" }
+    { name: "About", link: "/about" },
+    { name: "Careers", link: "/careers" },
+    { name: "Blog", link: "/blog" },
   ];

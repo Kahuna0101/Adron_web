@@ -1,6 +1,6 @@
 const { Box } = require("@chakra-ui/react")
 
-const PropertyYoutubeEmbed = ({ coverVideo }) => {
+const PropertyYoutubeEmbed = ({ youTubeVideo }) => {
     const ratio = (315 / 560) * 100;
   return (
     <Box 
@@ -14,7 +14,7 @@ const PropertyYoutubeEmbed = ({ coverVideo }) => {
             style={{ position: "absolute", top: 0, bottom: 0}}
             width="100%"
             height="100%"
-            src={`https://www.youtube.com/embed/${coverVideo}`}
+            src={`https://www.youtube.com/embed/${youTubeVideo}`}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         />
     </Box>

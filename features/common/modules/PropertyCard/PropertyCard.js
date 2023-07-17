@@ -1,24 +1,27 @@
 import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react";
 import { usePropertyFormat } from "../../Hooks/usePropertyFormat";
-import { TbBed, TbBath, TbRuler } from "react-icons/tb"
+import { FaRulerCombined, FaStar, FaBed, FaBath } from "react-icons/fa"
+
 import Link from "next/link";
+import { MdLocationPin } from "react-icons/md";
 
 const PropertyCard = (property) => {
   const {
+    id,
     address,
-    coverPhoto,
-    propertyType,
-    price,
     title,
+    propertyType,
+    propertyStatus,
+    price,
+    area,
     rooms,
     baths,
-    purpose,
-    sqSize,
-    externalID } = usePropertyFormat(property);
+    coverPhoto,
+  } = usePropertyFormat(property);
 
   return (
-   <Box marginBottom="4rem" backgroundColor="#fff">
-    <Link href={`/properties/${externalID}`}>
+  <Box marginBottom="4rem" backgroundColor="#fff" boxShadow="0 0 20px rgba(225, 225, 225, 0.7)" borderRadius="10px" width="100%">
+    <Link href={`/properties/${id}`}>
       <Box 
         backgroundImage={`url("${coverPhoto}")`} 
         height="250px"
@@ -28,11 +31,10 @@ const PropertyCard = (property) => {
         display="flex"
         flexDirection="column"
         justifyContent="space-between"
+        borderRadius="10px"
       >
         <Box margin="1rem">
-          <Badge colorScheme="green">
-            {purpose}
-          </Badge>
+          <Badge colorScheme={propertyStatus === "for-sale" ? 'green' : 'red'}> {propertyStatus} </Badge>
         </Box>
 
         <Box 
@@ -44,7 +46,7 @@ const PropertyCard = (property) => {
         >
           <Text 
             fontSize="3xl" 
-            fontWeight="medium" 
+            fontWeight="600" 
             color="whiteAlpha.800"
           >
             {price}
@@ -55,31 +57,61 @@ const PropertyCard = (property) => {
       <Box padding="1.5rem">
         <Text 
           fontSize="xl" 
-          fontWeight="medium" 
+          fontWeight="600" 
           marginBottom="1rem"
+          textTransform="uppercase"
+          _hover={{ color: '#34D399' }}
         >
-          {propertyType}
+          {title}
         </Text>
-        <Text fontWeight="light" fontSize="sm" isTruncated>{address}</Text>
-        <Text isTruncated>{title}</Text>
-        <HStack spacing="1.3rem" marginTop="1rem">
-          <Flex alignItems="center" gap="0.3rem">
-            <TbBed />
-            {rooms}
+        <Box display="flex" justifyContent="space-between" alignContent="center" mb="1rem">
+          <Flex flexDirection="row" alignItems="center" gap={1}>
+             <MdLocationPin style={{ color: '#34D399'}}/>
+             <Text fontWeight="500" fontSize="md" isTruncated display="flex" alignItems="center" gap="2"> {address}</Text>
           </Flex>
-          <Flex alignItems="center" gap="0.3rem">
-            <TbBath />
-            {baths}
-          </Flex>
-          <Flex alignItems="center" gap="0.3rem">
-            <TbRuler />
-            {sqSize}
-            <sup>m2</sup>
-          </Flex>
-        </HStack>
+        
+          <Badge padding="1.5" borderRadius="5px" color="green.600" colorScheme="whatsapp">{propertyType}</Badge>
+        </Box>
+       
+       {propertyType === "land" ? 
+        <Box display="flex" justifyContent="space-between" alignContent="center" mb="1rem">
+          <HStack spacing="1.3rem">
+            <Flex alignItems="center" gap={2} fontSize="15px">
+              <FaRulerCombined style={{ color: '#34D399'}}/>
+              <Text fontWeight="500">{area} Sq Meter</Text>
+            </Flex>
+          </HStack> 
+        </Box>
+        :
+        <Box display="flex" justifyContent="space-between" alignContent="center" mb="1rem">
+          <HStack spacing="1rem">
+            <Flex alignItems="center" gap={1.5} fontSize="15px">
+              <FaRulerCombined style={{ color: '#34D399'}}/>
+              <Text fontWeight="600">{area} SqM</Text>
+            </Flex>
+             <Flex alignItems="center" gap={1.5} fontSize="15px">
+              <FaBed style={{ color: '#34D399'}}/>
+              <Text fontWeight="600">{rooms} Beds</Text>
+            </Flex>
+            <Flex alignItems="center" gap={1.5} fontSize="15px">
+              <FaBath style={{ color: '#34D399'}}/>
+              <Text fontWeight="600">{baths} Baths</Text>
+            </Flex>
+           
+          </HStack> 
+        </Box>
+      }
+       <Box display="flex" alignItems="center" gap={2}>
+        <Text fontSize="medium" fontWeight="500" color="gray.400">Rating:</Text>
+        <Flex>
+          {[1, 2, 3, 4, 5].map((item) => <FaStar key={`star-${item}`} style={{ color: '#F2C94C' }} />)}
+        </Flex>
+       </Box>
+        
+       
       </Box>
-      </Link>
-   </Box>
+    </Link>
+  </Box>
   );
 };
 
