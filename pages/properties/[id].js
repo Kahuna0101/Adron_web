@@ -4,7 +4,7 @@ import PropertyMatterPortEmbed from '@/features/Property/components/PropertyMatt
 import PropertyStats from '@/features/Property/components/PropertyStats';
 import PropertyThumbnailSlider from '@/features/Property/components/PropertyThumbnailSlider';
 import PropertyYoutubeEmbed from '@/features/Property/components/PropertyYoutubeEmbed';
-import { Badge, Box, Flex, Grid, GridItem, SimpleGrid, Text } from '@chakra-ui/react';
+import { Badge, Box, Flex, Grid, GridItem, Text } from '@chakra-ui/react';
 import { TbMapPin } from 'react-icons/tb';
 import { getProperty } from '../api/properties';
 import DefaultLayout from '@/features/Layouts/DefaultLayout/DefaultLayout';

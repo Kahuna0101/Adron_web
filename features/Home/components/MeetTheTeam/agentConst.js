@@ -19,8 +19,7 @@ export const agents = [
           link:"www.instagram.com",
         },
       ],
-      description:
-        "Intelligent, ambitious, energetic and proactive perfectionist. Working with Adetola EmmanuelKing is a signature of success."
+      description: "Intelligent, ambitious, energetic and proactive perfectionist. Working with Adetola EmmanuelKing is a signature of success."
     },
     {
       name: "Olori Aderonke EmmanuelKing",
@@ -40,8 +39,7 @@ export const agents = [
           link:"www.instagram.com",
         },
       ],
-      description:
-        "Intelligent, ambitious, energetic and proactive perfectionist. Working with  Olori Aderonke Emmanuelking is a signature of success."
+      description: "Intelligent, ambitious, energetic and proactive perfectionist. Working with Olori Aderonke Emmanuelking is a signature of success."
     },
     {
       name: "Bunmi Akinfenwa",
@@ -61,8 +59,7 @@ export const agents = [
           link:"www.instagram.com",
         },
       ],
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a velit fermentum, ultrices ligula sed, tincidunt est. Nullam vulputate sollicitudin nulla non pulvinar. In eget imperdiet magna."
+      description: "Intelligent, ambitious, energetic and proactive perfectionist. Working with Olori Aderonke Emmanuelking is a signature of success."
     },
     {
       name: "Aminat Olaniyan Haastrup",
@@ -82,7 +79,6 @@ export const agents = [
           link:"www.instagram.com",
         },
       ],
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a velit fermentum, ultrices ligula sed, tincidunt est. Nullam vulputate sollicitudin nulla non pulvinar. In eget imperdiet magna."
+      description: "Intelligent, ambitious, energetic and proactive perfectionist. Working with Olori Aderonke Emmanuelking is a signature of success."
     }
   ];

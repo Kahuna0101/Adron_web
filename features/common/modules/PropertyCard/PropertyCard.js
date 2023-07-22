@@ -101,7 +101,7 @@ const PropertyCard = (property) => {
           </HStack> 
         </Box>
       }
-       <Box display="flex" alignItems="center" gap={2}>
+       <Box display="flex" justifyContent="flex-end" alignItems="center" gap={2}>
         <Text fontSize="medium" fontWeight="500" color="gray.400">Rating:</Text>
         <Flex>
           {[1, 2, 3, 4, 5].map((item) => <FaStar key={`star-${item}`} style={{ color: '#F2C94C' }} />)}

@@ -42,6 +42,7 @@ const AboutCard = ({ image, title, description, purpose }) => {
                   fontSize="medium"
                   fontWeight="bold"
                   color="whatsapp.700"
+                  cursor="pointer"
                   _hover={{
                     backgroundColor:'#fff',
                     color:'#1e2022'

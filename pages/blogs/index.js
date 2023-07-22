@@ -2,7 +2,7 @@ import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 
 import DefaultLayout from "@/features/Layouts/DefaultLayout";
 import { getPosts } from "../api/blogs";
-import PostCard from "@/features/common/modules/PostCard/PostCard";
+import PostCard from "@/features/common/modules/BlogCard/BlogCard";
 
 const Blogs = ({ posts }) => {
 

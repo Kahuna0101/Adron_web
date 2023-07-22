@@ -1,26 +1,10 @@
-import { useState, useRef } from 'react';
-import { Box, Button, Flex, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
+import { Box, Button, Flex } from "@chakra-ui/react";
 import Link from "next/link";
 
 import { navigationLinks } from "../../navigationConsts";
 
 const NavigationDesktop = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [hoverTimeout, setHoverTimeout] = useState(null);
-    const menuRef = useRef(null);
-  
-    const handleMouseEnter = () => {
-      setIsMenuOpen(true);
-      clearTimeout(hoverTimeout); // Clear any existing timeout
-    };
-  
-    const handleMouseLeave = () => {
-      const timeout = setTimeout(() => {
-        setIsMenuOpen(false);
-      }, 500); // Adjust the duration in milliseconds (e.g., 500 for 0.5 seconds)
-      setHoverTimeout(timeout);
-    };
-  
+
     return (
       <Box
         as="nav"
@@ -55,29 +39,6 @@ const NavigationDesktop = () => {
                   <NavigationLink key={item.title} {...item} />
                 </Button>
               ))}
-              <div
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                style={{ position: 'relative', paddingTop:'15px' }}
-                ref={menuRef}
-              >
-                <Menu isOpen={isMenuOpen} onClose={handleMouseLeave}>
-                  <MenuButton
-                    variant="unstyled"
-                    padding="1.5rem" 
-                    color="gray" 
-                    fontSize="0.8rem" 
-                    fontWeight="600"
-                    _hover={{ color:"whatsapp.400" }}
-                  >
-                    SERVICES
-                  </MenuButton>
-                  <MenuList>
-                    <MenuItem as='a' href='#'>Link 1</MenuItem>
-                    <MenuItem as='a' href='#'>Link 2</MenuItem>
-                  </MenuList>
-                </Menu>
-              </div>
             </Box>
             <Flex gap="2" fontWeight="medium">
               <Button 

@@ -1,25 +1,18 @@
 import { useState } from "react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Button, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import { Box, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import Link from "next/link";
-
 import { navigationLinks } from "../../navigationConsts";
 
 const NavigationMobile = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
     setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
   };
 
-  const handleSubMenuToggle = () => {
-    setIsSubMenuOpen((prevIsSubMenuOpen) => !prevIsSubMenuOpen);
-  };
-
   const handleMenuClose = () => {
     setIsMenuOpen(false);
-    setIsSubMenuOpen(false);
   };
 
   return (
@@ -28,7 +21,7 @@ const NavigationMobile = () => {
       width="100%"
       display={{ base: "block", md: "none" }}
       boxShadow="0 0 20px rgba(168, 168, 168, 0.15)"
-      position="fixed"
+      position="sticky"
       zIndex="2"
     >
       <Flex alignItems="center" justifyContent="space-between">
@@ -49,37 +42,11 @@ const NavigationMobile = () => {
               >
                 {isOpen ? <CloseIcon /> : <HamburgerIcon />}
               </MenuButton>
-              {isOpen && (
-                <MenuList>
-                  {navigationLinks.map((item) => (
-                    <NavigationLink key={item.title} {...item} />
-                  ))}
-                  <MenuItem onClick={handleSubMenuToggle}>
-                    <div
-                      style={{ position: "relative" }}
-                    >
-                      <Menu isOpen={isSubMenuOpen} onClose={handleMenuClose}>
-                        <MenuButton
-                          aria-label="options"
-                          borderRadius="50%"
-                          fontWeight="600"
-                          onClick={handleSubMenuToggle}
-                        >
-                          Services
-                        </MenuButton>
-                        <MenuList fontWeight="600">
-                          <MenuItem as="a" href="#">
-                            Sublink 1
-                          </MenuItem>
-                          <MenuItem as="a" href="#">
-                            Sublink 2
-                          </MenuItem>
-                        </MenuList>
-                      </Menu>
-                    </div>
-                  </MenuItem>
-                </MenuList>
-              )}
+              <MenuList>
+                {navigationLinks.map((item) => (
+                  <NavigationLink key={item.title} {...item} onClick={handleMenuClose} />
+                ))}
+              </MenuList>
             </>
           )}
         </Menu>
@@ -90,10 +57,10 @@ const NavigationMobile = () => {
 
 export default NavigationMobile;
 
-const NavigationLink = ({ title, link }) => {
+const NavigationLink = ({ title, link, onClick }) => {
   return (
     <Link href={link}>
-      <MenuItem alignItems="center" gap="0.5rem" fontWeight="600" >
+      <MenuItem alignItems="center" gap="0.5rem" fontWeight="600" onClick={onClick}>
         {title}
       </MenuItem>
     </Link>

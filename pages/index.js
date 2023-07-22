@@ -1,8 +1,6 @@
-//import { getProperties } from "../pages/api/properties/index";
 import FeaturedProperties from "@/features/Home/components/FeaturedProperties";
-import HeroBanner from "@/features/Home/components/HeroBanner";
+import Hero from "@/features/Home/components/Hero";
 import MeetTheTeam from "@/features/Home/components/MeetTheTeam";
-import Partners from "@/features/Home/components/Partners";
 import Testimonials from "@/features/Home/components/Testimonials";
 import DefaultLayout from "@/features/Layouts/DefaultLayout";
 import AboutUs from "@/features/Home/components/AboutUs";
@@ -12,7 +10,7 @@ export default function Home({ featuredProperties }) {
  
   return (
     <DefaultLayout>
-      <HeroBanner />
+      <Hero />
       <FeaturedProperties featuredProperties={featuredProperties}/>
       <AboutUs />
       <MeetTheTeam />

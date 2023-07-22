@@ -14,7 +14,7 @@ const Footer = () => {
           gap={{ base: "1rem", sm: "3rem"}}
           minChildWidth={{ base: "none", sm: "50px" }}
         >
-          <Flex display={{ base:"none", sm:'block'}}>
+          <Flex >
             <Link href="/">
               <img src="../logo/logo.png" alt="Adron Homes" width="150px" height="50px"/>
             </Link>
@@ -32,7 +32,7 @@ const Footer = () => {
             ))}
           </Flex>
           <Flex flexDirection="column">
-            <FooterHeader title="Work With Us"/>
+            <FooterHeader title="Quick Links"/>
             {workWithUs.map((item) => (
               <FooterLink key={item.name} {...item}/>
             ))}

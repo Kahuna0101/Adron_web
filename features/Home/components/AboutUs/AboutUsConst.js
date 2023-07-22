@@ -41,14 +41,14 @@ export const objectives = [
 export const journeys = [
     {
         title: "11",
-        description: "years in the Real-Estate business"
+        description: "Years in the Real-Estate Business"
     },
     {
-        title: "10K+",
-        description: "properties sold"
+        title: "100K+",
+        description: "Properties Sold"
     },
     {
         title: "90%",
-        description: "happy clients"
+        description: "Happy Clients"
     },
 ]

@@ -1,6 +1,6 @@
 import AboutCard from '@/features/common/modules/AboutCard'
 import { Box, Flex, Text } from '@chakra-ui/react'
-import { hero } from '../HeroBanner/BannerConst'
+import { hero } from '../Hero/HeroConst'
 import { abouts } from './AboutUsConst'
 
 const AboutUs = () => {

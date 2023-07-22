@@ -1,21 +1,14 @@
-import { usePropertyFormat } from "../../Hooks/usePropertyFormat";
+import { usePostFormat } from "../../Hooks/usePostFormat";
 import { Box, Button, Fade, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { banner } from "@/features/Home/components/HeroBanner/BannerConst";
+import { banner } from "@/features/Home/components/Hero/HeroConst";
 import { IoIosArrowForward } from "react-icons/io";
 
 const BannerCard = () => {
 
   return (
-        <Box position="relative" display="flex" backgroundImage={banner} backgroundSize="cover" minHeight={{base:"110vh", sm:"90vh"}}
+        <Box position="relative" display="flex" backgroundImage={banner} backgroundSize="cover" minHeight="100vh"
             backgroundPosition="center" backgroundAttachment="fixed">
-        {/*<Box
-        position="absolute"
-        width="100%"
-        height="100%"
-        opacity="0.4"
-        backgroundColor="whatsapp.500"
-        >*/}
           <Box 
             display="flex"
             flex="1"
@@ -48,12 +41,9 @@ const BannerCard = () => {
                 </Button>
                </Link>
             </Box>
-            <Box display={{base:"none", sm:"flex"}}>
-               <Text fontSize="2xl">Slide  2</Text>  
-            </Box>
           </Box>
         </Box>
   )
 }
 
-export default BannerCard
+export default BannerCard;

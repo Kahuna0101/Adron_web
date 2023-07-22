@@ -17,6 +17,7 @@ const AgentCard = ({ name, image, description, title, social}) => {
         justifyContent="center"
         boxShadow="0 12px 15px rgba(140, 152, 164, .1)"
         marginBottom={{base:"1rem", sm:"3rem"}}
+        height="100%"
       >
         <Image 
           src={image}

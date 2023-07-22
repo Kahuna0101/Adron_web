@@ -35,7 +35,7 @@ const ContactPage = () => {
                     </Box>  
                 </GridItem>
                 <GridItem colSpan={{ base: 6, sm: 3 }} flex={1}>
-                        <TextContentBox title="Contact Us">
+                    <TextContentBox title="Contact Us">
                         <ContactForm />
                     </TextContentBox>
                     <Text fontWeight="medium" color="gray.500" textAlign="center">
