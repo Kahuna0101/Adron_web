@@ -1,5 +1,5 @@
 import DefaultLayout from '@/features/Layouts/DefaultLayout/DefaultLayout'
-import { Box,Grid, Heading, GridItem, Input, Textarea, Button, Flex, Text } from '@chakra-ui/react'
+import { Box, Flex, Text } from '@chakra-ui/react'
 import React from 'react';
 
 import { usePostFormat } from '../../features/common/Hooks/usePostFormat'

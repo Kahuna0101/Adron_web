@@ -10,6 +10,28 @@ const ContactForm = () => {
     } = useForm();
 
     const onSubmit = (data) => console.log(data);
+    {/* const onSubmit = async (data) => {
+    try {
+      const response = await fetch('/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log('Email sent successfully');
+        // You can show a success message to the user here
+      } else {
+        console.error('Error sending email');
+        // Handle error and show an error message to the user
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error and show an error message to the user
+    }
+    };*/}
 
   return (
     <Box 

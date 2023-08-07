@@ -5,13 +5,13 @@ import Testimonials from "@/features/Home/components/Testimonials";
 import DefaultLayout from "@/features/Layouts/DefaultLayout";
 import AboutUs from "@/features/Home/components/AboutUs";
 import { getProperties } from "./api/properties";
+import { getPosts } from "./api/blogs";
 
-export default function Home({ featuredProperties }) {
- 
+export default function Home({ featuredProperties, promos }) {
   return (
     <DefaultLayout>
-      <Hero />
-      <FeaturedProperties featuredProperties={featuredProperties}/>
+      <Hero promos={promos}/>
+      <FeaturedProperties featuredProperties={featuredProperties} />
       <AboutUs />
       <MeetTheTeam />
       <Testimonials />
@@ -19,15 +19,15 @@ export default function Home({ featuredProperties }) {
   );
 };
 
-
-
 export async function getStaticProps() {
-  const data = await getProperties(5);
+  const featuredPropertiesData = await getProperties(5);
+  const promosData = await getPosts(10);
 
   return {
-      props: {
-          featuredProperties: data,
-      },
-      revalidate: 60,
+    props: {
+      featuredProperties: featuredPropertiesData,
+      promos: promosData,
+    },
+    revalidate: 60,
   };
 };

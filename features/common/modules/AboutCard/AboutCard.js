@@ -20,7 +20,7 @@ const AboutCard = ({ image, title, description, purpose }) => {
       backgroundColor="#fff"
       backgroundClip="border-box"
       border="0.0625rem solid rgba(231, 234, 243, 0.7)"
-      borderRadius=".75rem"
+      borderRadius="0 .75rem"
       boxShadow="0 0 20px rgba(225, 225, 225, 0.7)"
       height="100%"
       width="300px"

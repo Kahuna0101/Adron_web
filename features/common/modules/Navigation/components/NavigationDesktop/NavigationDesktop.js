@@ -21,7 +21,7 @@ const NavigationDesktop = () => {
           <Flex alignItems="center" justifyContent="space-between">
             <Link href="/">
               <Box display="flex" alignItems="center" >
-                <img src="../logo/logo.png" alt="Adron Homes" width="90px" height="20px"/>
+                <img src="../logo/logo.png" alt="Adron Homes" width="90px" height="20px" color="#45b82b"/>
               </Box>
             </Link>
             <Box display="flex" alignItems="center">
@@ -30,7 +30,7 @@ const NavigationDesktop = () => {
                   key={item.title}
                   variant="unstyled"
                   padding="1.5rem" 
-                  color="gray" 
+
                   fontSize="0.8rem" 
                   fontWeight="medium"
                   textTransform="uppercase"
