@@ -9,13 +9,12 @@ const ContactForm = () => {
         formState:{errors},
     } = useForm();
 
-    const onSubmit = (data) => console.log(data);
-    {/* const onSubmit = async (data) => {
+   const onSubmit = async (data) => {
     try {
-      const response = await fetch('/submit-form', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
@@ -31,7 +30,7 @@ const ContactForm = () => {
       console.error('Error:', error);
       // Handle error and show an error message to the user
     }
-    };*/}
+    };
 
   return (
     <Box 
@@ -54,14 +53,14 @@ const ContactForm = () => {
                   id="email"
                   type="text"
                   placeholder="Email"
-                  {...register("email", { required: true })}
+                  {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
                 />
                 <Input 
                   marginTop="1.3rem"
                   id="phone"
-                  type="text"
+                  type="tel"
                   placeholder="Phone"
-                  {...register("phone", { required: true })}
+                  {...register("phone", { required: true, minLength: 6, maxLength: 12 })}
                 />
                 <Textarea 
                   marginTop="1.3rem" 

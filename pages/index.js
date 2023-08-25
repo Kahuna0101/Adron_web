@@ -6,11 +6,13 @@ import DefaultLayout from "@/features/Layouts/DefaultLayout";
 import AboutUs from "@/features/Home/components/AboutUs";
 import { getProperties } from "./api/properties";
 import { getPosts } from "./api/blogs";
+import HeroSlide from "@/features/Home/components/HeroSlide/HeroSlide";
 
 export default function Home({ featuredProperties, promos }) {
   return (
     <DefaultLayout>
-      <Hero promos={promos}/>
+      <Hero />
+      <HeroSlide promos={promos}/>
       <FeaturedProperties featuredProperties={featuredProperties} />
       <AboutUs />
       <MeetTheTeam />

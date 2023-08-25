@@ -8,20 +8,17 @@ const BannerCard = ( post ) => {
 
   const {
     id,
-    title,
     photo,
   } = usePostFormat(post);
 
   return (
-        <Box position="relative" display="flex" backgroundImage={photo} backgroundSize="cover" minHeight="100vh"
-            backgroundPosition="center" backgroundAttachment="fixed">
+        <Box backgroundImage={photo} backgroundSize="cover" minHeight="100vh"
+            backgroundPosition="center" >
           <Box 
             display="flex"
-            flex="1"
             flexDirection={{ base: "column", sm: "row"}}
             alignItems="center"
             justifyContent={{ base:"flex-start", sm:"space-between"}}
- 
             position="absolute"
             color="white"
             fontWeight="light"
@@ -32,8 +29,7 @@ const BannerCard = ( post ) => {
             margin="20px"
             padding="2rem"
           >
-            <Box width={{base:"100%", sm:"auto"}} mt={{base:"40vh", sm:"47vh"}}>
-               <Text fontSize={{base:"50px", sm:"70px"}} fontWeight="700" mb="4rem">{title}</Text>
+            <Box width={{base:"100%", sm:"auto"}} mt={{base:"40vh", sm:"65vh"}}>
                <Link href={`/blogs/${id}`}>
                 <Button 
                   padding="1.5rem" 

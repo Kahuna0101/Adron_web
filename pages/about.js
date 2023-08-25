@@ -6,6 +6,7 @@ import { journeys, objectives } from "@/features/Home/components/AboutUs/AboutUs
 import AgentCard from "@/features/Home/components/MeetTheTeam/components/AgentCard/AgentCard";
 import { agents } from "@/features/Home/components/MeetTheTeam/agentConst";
 import { About, SoFar } from "@/features/Home/components/AboutUs/AboutComp";
+import CountUp from "react-countup/";
 
 
 const about = () => {
@@ -31,9 +32,20 @@ const about = () => {
               width="60%"
               mt="90px"
             >
-                {journeys.map((journey) => (
-                    <SoFar key={journey.title} { ...journey} />
-                ))}
+               <Flex flexDir="column" alignItems="center">
+                <Text fontSize="4xl" fontWeight="600"><CountUp end={11} /></Text>
+                <Text fontSize="1.7rem" fontWeight="600" color="#8c8b8b" textAlign="center">Years in the <br/> Real-Estate Business</Text>
+               </Flex>
+
+               <Flex flexDir="column" alignItems="center">
+               <Text fontSize="4xl" fontWeight="600"><CountUp start={9500} end={10000} duration={4}/>+</Text>
+                <Text fontSize="1.7rem" fontWeight="600" color="#8c8b8b" textAlign="center">Sold <br/> Products </Text>
+               </Flex>
+
+               <Flex flexDir="column" alignItems="center">
+               <Text fontSize="4xl" fontWeight="600">90%</Text>
+                <Text fontSize="1.7rem" fontWeight="600" color="#8c8b8b" textAlign="center">Happy <br/> Clients</Text>
+               </Flex>
             </Grid>
             
             <Box border="1px solid rgba(149, 149, 149, 0.5)" width={{ base:"100%", sm:"60%"}} margin={{ base:"5rem auto", sm:"10rem 17rem"}} />

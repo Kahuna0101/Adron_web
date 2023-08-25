@@ -37,18 +37,3 @@ export const objectives = [
         description:'Our basic role at Adron Homes and Properties Limited is to secure suitable house for everyone, irrespective of social class, income level and all else.',
     },
 ]
-
-export const journeys = [
-    {
-        title: "11",
-        description: "Years in the Real-Estate Business"
-    },
-    {
-        title: "100K+",
-        description: "Properties Sold"
-    },
-    {
-        title: "90%",
-        description: "Happy Clients"
-    },
-]

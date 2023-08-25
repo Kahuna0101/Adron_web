@@ -29,8 +29,8 @@ const NavigationDesktop = () => {
                 <Button
                   key={item.title}
                   variant="unstyled"
+                  color="grey"
                   padding="1.5rem" 
-
                   fontSize="0.8rem" 
                   fontWeight="medium"
                   textTransform="uppercase"

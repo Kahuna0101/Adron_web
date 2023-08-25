@@ -24,7 +24,7 @@ export const agents = [
     {
       name: "Olori Aderonke EmmanuelKing",
       title: "Executive Director Finance, Budget Planning and Administration",
-      image: "./agents/agent4.jpg",
+      image: "./agents/agent2.jpg",
       social: [
         {
           icon:<TbBrandFacebook />,
@@ -44,7 +44,7 @@ export const agents = [
     {
       name: "Bunmi Akinfenwa",
       title: "Director General of Sales and Marketing",
-      image: "./agents/agent2.jpg",
+      image: "./agents/agent3.jpg",
       social: [
         {
           icon:<TbBrandFacebook />,
@@ -64,7 +64,7 @@ export const agents = [
     {
       name: "Aminat Olaniyan Haastrup",
       title: "Director of Customer Services",
-      image: "./agents/agent3.jpg",
+      image: "./agents/agent4.jpg",
       social: [
         {
         icon:<TbBrandFacebook />,
