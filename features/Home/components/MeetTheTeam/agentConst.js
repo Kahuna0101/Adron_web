@@ -8,15 +8,15 @@ export const agents = [
       social: [
         {
           icon:<TbBrandFacebook />,
-          link:"www.facebook.com",
+          link:"https://www.facebook.com/",
         },
         {
           icon:<TbBrandTwitter />,
-          link:"www.twitter.com",
+          link:"https://www.twitter.com/",
         },
         {
           icon:<TbBrandInstagram/>,
-          link:"www.instagram.com",
+          link:"https://www.instagram.com/",
         },
       ],
       description: "Intelligent, ambitious, energetic and proactive perfectionist. Working with Adetola EmmanuelKing is a signature of success."
@@ -28,15 +28,15 @@ export const agents = [
       social: [
         {
           icon:<TbBrandFacebook />,
-          link:"www.facebook.com",
+          link:"https://www.facebook.com/",
         },
         {
           icon:<TbBrandTwitter />,
-          link:"www.twitter.com",
+          link:"https://www.twitter.com/",
         },
         {
           icon:<TbBrandInstagram/>,
-          link:"www.instagram.com",
+          link:"https://www.instagram.com/",
         },
       ],
       description: "Intelligent, ambitious, energetic and proactive perfectionist. Working with Olori Aderonke Emmanuelking is a signature of success."
@@ -48,15 +48,15 @@ export const agents = [
       social: [
         {
           icon:<TbBrandFacebook />,
-          link:"www.facebook.com",
+          link:"https://www.facebook.com/",
         },
         {
           icon:<TbBrandTwitter />,
-          link:"www.twitter.com",
+          link:"https://www.twitter.com/",
         },
         {
           icon:<TbBrandInstagram/>,
-          link:"www.instagram.com",
+          link:"https://www.instagram.com/",
         },
       ],
       description: "Intelligent, ambitious, energetic and proactive perfectionist. Working with Olori Aderonke Emmanuelking is a signature of success."
@@ -68,15 +68,15 @@ export const agents = [
       social: [
         {
         icon:<TbBrandFacebook />,
-        link:"www.facebook.com",
+        link:"https://www.facebook.com/",
         },
         {
           icon:<TbBrandTwitter />,
-          link:"www.twitter.com",
+          link:"https://www.twitter.com/",
         },
         {
           icon:<TbBrandInstagram/>,
-          link:"www.instagram.com",
+          link:"https://www.instagram.com/",
         },
       ],
       description: "Intelligent, ambitious, energetic and proactive perfectionist. Working with Olori Aderonke Emmanuelking is a signature of success."

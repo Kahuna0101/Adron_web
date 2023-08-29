@@ -44,8 +44,8 @@ const PropertySingle = ( { property }) => {
 
   return (
     <DefaultLayout>
-      <Box backgroundColor="#f7f8f9" padding={{ base: "1rem", sm:"9rem"}}>
-        <Box width="100%" margin="0 auto" mt={{ base:"90px", sm:"10px" }}>
+      <Box backgroundColor="#f7f8f9" padding={{ base: "1rem", md:"9rem"}}>
+        <Box width="100%" margin="0 auto" mt={{ base:"90px", md:"10px" }}>
           <Grid 
             templateColumns="repeat(6, 1fr)" 
             gap="5" 
@@ -57,7 +57,7 @@ const PropertySingle = ( { property }) => {
                 fontSize="3xl"
                 fontWeight="medium"
                 color="whatsapp.800"
-                textAlign={{ base: "center", sm: "left" }}
+                textAlign={{ base: "center", md: "left" }}
               >
                 {title}
               </Text>
@@ -66,9 +66,9 @@ const PropertySingle = ( { property }) => {
                 color="whatsapp.600"
                 textAlign="center"
                 alignItems="center"
-                flexDirection={{ base: "column", sm: "row" }}
+                flexDirection={{ base: "column", md: "row" }}
                 gap="0.5rem"
-                marginY={{ base: "1rem", sm: "0"}}
+                marginY={{ base: "1rem", md: "0"}}
               >
                 <TbMapPin />
                 <Text fontWeight="light">
@@ -80,12 +80,12 @@ const PropertySingle = ( { property }) => {
             </GridItem>
 
 
-            <GridItem colSpan={{ base: 6, sm: 3 }}>
+            <GridItem colSpan={{ base: 6, md: 3 }}>
               <PropertyThumbnailSlider photos={photos} />
             </GridItem>
 
 
-            <GridItem colSpan={{ base: 6, sm: 3 }}>
+            <GridItem colSpan={{ base: 6, md: 3 }}>
               <PropertyStats 
                 rooms={rooms}
                 baths={baths}
@@ -135,14 +135,14 @@ const PropertySingle = ( { property }) => {
           width="100%" 
           margin="0 auto"
         >
-          <GridItem colSpan={{base: "6", sm: "3"}}>
+          <GridItem colSpan={{base: "6", md: "3"}}>
             <TextContentBox title="Video Walkthrough">
               <PropertyYoutubeEmbed youTubeVideo={youTubeVideo}/>
             </TextContentBox>
           </GridItem>
 
 
-          <GridItem colSpan={{base: "6", sm: "3"}}>
+          <GridItem colSpan={{base: "6", md: "3"}}>
             <TextContentBox title="3D Virtual Walkthrough">
               <PropertyMatterPortEmbed panorama={panorama}/>
             </TextContentBox>

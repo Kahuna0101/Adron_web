@@ -38,7 +38,7 @@ export const locations = [
     {
         title:"Surulere Office",
         address:"10, Bode Thomas Street, Surulere, Lagos.",
-        phone:"+234-8023236621,  +234-7061194526",
+        phone:"+2348180751599, +2347061194526",
         email:"mainland3@adronhomesproperties.com",
         link:"mailto:mainland3@adronhomesproperties.com"
     },
@@ -66,7 +66,7 @@ export const locations = [
     {
         title:"Festac Office",
         address:"Plot 2034 Amuwo-odofin Residential Scheme, Festac Link Road, Festac Lagos",
-        phone:"+234-8022846321, +234-8180751599",
+        phone:"08022846321, 08180751599",
         email:"island2@adronhomesproperties.com",
         link:"mailto:island2@adronhomesproperties.com"
     },
@@ -115,7 +115,7 @@ export const locations = [
     {
         title:"Ebutte-Metta Office",
         address:"249 Herbert Macaulay Way, Alagomeji, Opposite Gtb, Yaba, Lagos State",
-        phone:"+234-8056307048,  +234-8059210054",
+        phone:"08180751599, 08056307048",
         email:"ebutemetta@adronhomesproperties.com",
         link:"mailto:ebutemetta@adronhomesproperties.com"
     },
@@ -156,28 +156,35 @@ export const locations = [
     },
     {
         title:"Wuse Office",
-        address:"3, Ejura Close, opposite Airtel Office, Behind LG office, Wuse 2, FCT, Abuja.",
-        phone:"+234-8061170650, +234-8037723051",
+        address:"No 36 Douala Crescent, Jaiz Bank Building, Opp Access Bank, Beside Wuse Market, Wuse Zone 5, FCT-Abuja",
+        phone:"07030211186, 08062492833, 08069083027",
         email:"abuja3@adronhomesproperties.com",
         link:"mailto:abuja3@adronhomesproperties.com"
     },
     {
-        title:"Garki Office",
+        title:"GARKI (Head Office)",
         address:"Plot 27, Okah Akoko Street, Off Lagos Street, By Jevinik Restaurant, Garki II, Abuja.",
-        phone:"+234-8037252165, +234-8113404040 ",
+        phone:"08032908163, 07056386254, 08037252165",
+        email:"abuja@adronhomesproperties.com",
+        link:"mailto:abuja@adronhomesproperties.com"
+    },
+    {
+        title:"GARKI (Regional Office)",
+        address:"Bankers House Abuja, No 12 Oro Ago Crescen, Off Twon Brass Street, Garki 2, FCT-Abuja.",
+        phone:"08167552420, 07039659570, 08171571108",
         email:"abuja@adronhomesproperties.com",
         link:"mailto:abuja@adronhomesproperties.com"
     },
     {
         title:"Kubwa Office",
         address:"D99, Opposite Domino's Pizza, Gado Nasko Way, phase 2, Site 1, Kubwa, Abuja.",
-        phone:"+234-8023255398,  +234-8061170650",
+        phone:"08022220215, 08059307409, 09020475116",
         email:"abuja4@adronhomesproperties.com",
         link:"mailto:abuja4@adronhomesproperties.com"
     },
     {
         title:"Nassarawa Office",
-        address:"2nd Floor, AYM Shafa Filling Station, Beside Diamond bank, Mararaba.",
+        address:"1st Floor inside AYM Shafa Filling Station, Beside Access Bank (Former Diamond bank), Mararaba.",
         phone:"+234-8032908163,  +234-8039763718",
         email:"abuja2@adronhomesproperties.com",
         link:"mailto:abuja2@adronhomesproperties.com"
@@ -199,14 +206,14 @@ export const locations = [
     {
         title:"Alaba Office",
         address:"H46/47, Alaba INTL. Market Road, Beside Fidelity Bank, Ojo, Lagos.",
-        phone:"+234-8113404040, +234-8033344430",
+        phone:"+2348034883095, +2348083143780",
         email:"alaba@adronhomesproperties.com",
         link:"mailto:alaba@adronhomesproperties.com"
     },
     {
         title:"Badagry Office",
         address:"Opeyemi Foods Plaza, Agbata Market Road, Badagry Lagos.",
-        phone:"+234-8059210054,  +234-8036075091",
+        phone:"+2348083143780, +2348036075091",
         email:"badagry@adronhomesproperties.com",
         link:"mailto:badagry@adronhomesproperties.com"
     },
@@ -289,15 +296,15 @@ export const locations = [
     },
     {
         title:"Suleja Office",
-        address:"SHEMA FILLING STATION, GAURAKA JUNCTION, KADUNA ROAD, SULEJA NIGER STATE.",
-        phone:"+234-8032737517, +234-8033344430",
+        address:"Shema Filling Station Complex, Gauraka Junction, Kaduna Road, Suleja, Niger State ",
+        phone:"08032737517, 08188074883, 08022843416",
         email:"suleja@adronhomesproperties.com",
         link:"mailto:suleja@adronhomesproperties.com"
     },
     {
         title:"Asokoro Office",
-        address:"Asokoro, Abuja.",
-        phone:"+234-7067849936, +234-8022220215",
+        address:"Bankers House Abuja, No 12 Oro Ago Crescen, Off Twon Brass Street, Garki 2, FCT-Abuja",
+        phone:"08168492430, 09097807330, 08096104880",
         email:"asokooro@adronhomesproperties.com",
         link:"mailto:asokooro@adronhomesproperties.com"
     },
@@ -310,8 +317,8 @@ export const locations = [
     },
     {
         title:"Gwagwalada Office",
-        address:"No 51, Park Road Gwagwalada  FCT, Abuja.",
-        phone:"+234-7056386254, +234-7067849936",
+        address:"No 15 Park Road beside LAPO Microfinance Bank and CD Plaza gwagwalada, FCT-Abuja.",
+        phone:"08125634953, 07038863333, 08023255398",
         email:"gwagwalada@adronhomesproperties.com",
         link:"mailto:gwagwalada@adronhomesproperties.com"
     },

@@ -23,7 +23,7 @@ const Hero = () => {
       <Box
         display="flex"
         gap={20}
-        padding={{ base: "3rem", sm: "9rem" }}
+        padding={{ base: "3rem", md: "9rem" }}
         width="100%"
         justifyContent="center"
         alignItems="center"
@@ -44,7 +44,7 @@ const Hero = () => {
               background="#4ade1f"
               borderRadius="999px"
               position="relative"
-              right={{base:"-88%", sm:"-57%"}}
+              right={{base:"-88%", md:"-57%"}}
               top="50px"
               zIndex="-1"
             />
@@ -70,7 +70,7 @@ const Hero = () => {
             alignItems="center"
             width="100%"
             justifyContent="space-between"
-            flexDir={{base: "column", sm: "row" }}
+            flexDir={{base: "column", md: "row" }}
           >
             <Box
               display="flex"
@@ -121,7 +121,7 @@ const Hero = () => {
             width="8rem"
             fontWeight={600}
             fontSize={15}
-            display={{base:"none", sm:"flex"}}
+            display={{base:"none", md:"flex"}}
             flexDir="column"
             justifyContent="center"
             alignItems="center"
@@ -156,8 +156,8 @@ const Hero = () => {
           alignItems="center"
         >
           <Box
-            width={{base:"22rem", sm:"30rem"}}
-            height={{base:"35rem", sm:"45rem"}}
+            width={{base:"22rem", md:"30rem"}}
+            height={{base:"35rem", md:"45rem"}}
             overflow="hidden"
             borderRadius="15rem 15rem 0 0"
             border="8px solid rgba(255, 255, 255, 0.12)"
@@ -171,7 +171,7 @@ const Hero = () => {
             width="8rem"
             fontWeight={600}
             fontSize={15}
-            display={{base:"flex", sm:"none"}}
+            display={{base:"flex", md:"none"}}
             flexDir="column"
             justifyContent="center"
             alignItems="center"

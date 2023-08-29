@@ -1,7 +1,19 @@
 import nodemailer from "nodemailer"
 
 export default async function ContactAPI (req, res) {
-    const { name, email, phone, message, consent } = req.body;
+    const { 
+        firstname,
+        lastname,
+        email,
+        phone,
+        estate,
+        numberOfPlots,
+        message,
+        refName,
+        refPhone 
+    } = req.body;
+    const subscriber = req.body.subscriber;
+    const contactMethod = req.body.contactMethod;
 
     const user = process.env.EMAIL_USER;
 
@@ -20,7 +32,7 @@ export default async function ContactAPI (req, res) {
             from: `AdronHomes 🏡 <${user}>`,
             to: user,
             replyTo: email,
-            subject: `Contact Form Submission By ${name}`,
+            subject: `Subscription Form Submission By ${firstname} ${lastname}`,
             html:`
             <div style="width: 100%; background-color: #f3f9ff; padding: 5rem 0">
                 <div style="max-width: 700px; background-color: white; margin: 0 auto">
@@ -35,11 +47,17 @@ export default async function ContactAPI (req, res) {
                             From Adron Homes
                         </p>
                         <div style="font-size: .8rem; margin: 0 30px">
-                            <p>FullName: ${name}<p/>
+                            <p>FirstName: ${firstname}<p/>
+                            <p>LastName: ${lastname}<p/>
                             <p>Email: ${email}<p/>
                             <p>Phone Number: ${phone}<p/>
+                            <p>Mode of Client: ${subscriber}<p/>
+                            <p>Interested Estate: ${estate}<p/>
+                            <p>No of Plots: ${numberOfPlots}<p/>
                             <p>Message: ${message}<p/>
-                            <p>Consent: ${consent}<p/>
+                            <p>Contact Method: ${contactMethod}<p/>
+                            <p>Name Of Agent: ${refName}<p/>
+                            <p>Contact of Agent: ${refPhone}<p/>
                         </div>
                     </div>
                 </div>

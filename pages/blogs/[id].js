@@ -4,8 +4,6 @@ import React from 'react';
 
 import { usePostFormat } from '../../features/common/Hooks/usePostFormat'
 import { getPost } from '../api/blogs'
-import TextContentBox from '@/features/common/modules/TextContentBox/TextContentBox';
-import CommentForm from '@/features/common/modules/CommentForm/CommentForm';
 
 const BlogSingle = ({ post }) => {
 
@@ -19,10 +17,10 @@ const BlogSingle = ({ post }) => {
 
   return (
     <DefaultLayout>
-      <Box backgroundColor="#f7f8f9" padding={{ base: "1rem", sm:"9rem"}}>
-        <Box width="100%" margin="0 auto" mt={{ base:"90px", sm:"10px" }}>
+      <Box backgroundColor="#f7f8f9" padding={{ base: "1rem", md:"9rem"}}>
+        <Box width="100%" margin="0 auto" mt={{ base:"90px", md:"10px" }}>
           
-          <Box mt={{ base: 40, sm: 8 }}>
+          <Box mt={{ base: 40, md: 8 }}>
             <Box textAlign="center" >
               
               <Text fontSize={{ base: "2xl", md: "4xl" }} fontWeight="700" mb={3}>
@@ -70,12 +68,6 @@ const BlogSingle = ({ post }) => {
                   {desc}
                 </Text>
             </Box>
-          </Box>
-
-          <Box mt={8}>
-            <TextContentBox title="Leave A Comment:">
-              <CommentForm />
-            </TextContentBox>
           </Box>
         </Box>
       </Box>

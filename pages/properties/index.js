@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, SimpleGrid, Button, Flex, Text, Input, Select } from "@chakra-ui/react";
+import { Box, Button, Flex, Text, Input, Select } from "@chakra-ui/react";
 
 import { getProperties } from "../api/properties/index";
 import PropertyCard from "@/features/common/modules/PropertyCard";
@@ -38,8 +38,8 @@ const Properties = ({properties}) => {
 
   return (
    <DefaultLayout>
-        <Box backgroundColor="#f7f8f9" padding={{ base: "3rem", sm:"9rem"}}>
-            <Box width="100%" margin="0 auto" mt={{ base:"90px", sm:"10px" }}>
+        <Box backgroundColor="#f7f8f9" padding={{ base: "3rem", md:"9rem"}}>
+            <Box width="100%" margin="0 auto" mt={{ base:"90px", md:"10px" }}>
                 <Text
                     fontSize="30px"
                     fontWeight="600"
@@ -48,7 +48,7 @@ const Properties = ({properties}) => {
                     {!properties.length? "There are no Properties" : "All Properties"}
                 </Text>
                 <Box display="flex" flexWrap="wrap" justifyContent="center" mt="3" mb="3" gap="4">
-                    <Flex display="flex" direction={{ base: "column", sm: "row" }} gap={3} width="700px" mb="3">
+                    <Flex display="flex" direction={{ base: "column", md: "row" }} gap={3} width="700px" mb="3">
                         <Button 
                             width="full"
                             backgroundColor= "whatsapp.600"
@@ -88,14 +88,15 @@ const Properties = ({properties}) => {
                         </Select>
                     </Flex>
 
-                    <SimpleGrid 
-                        columns={{base:"1", sm:"4"}} 
-                        gap={{base:"0", sm:"2rem"}}
+                    <Box 
+                        display="flex"
+                        flexDir={{ base: "column", md:"row"}}
+                        gap={{base:"0", md:"2rem"}}
                     >
                         {sortedProperties.map((property) => (
                             <PropertyCard key={property.id} {...property}/>
                         ))}
-                    </SimpleGrid>
+                    </Box>
 
                 </Box>
             </Box>

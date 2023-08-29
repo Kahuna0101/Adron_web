@@ -64,7 +64,7 @@ export default AgentCard
 
 const SocialLink = ({ link, icon}) => {
   return (
-      <Link href={link}>
+      <Link href={link} target="_blank">
           <Box padding="0.5rem .75rem" color="#71869d" backgroundColor="rgba(113, 134, 157, .1)" borderRadius="5px" fontSize="1.1rem" fontWeight="400" _hover={{ color: "#fff", backgroundColor: "#71869d" }}>
             {icon}
           </Box>

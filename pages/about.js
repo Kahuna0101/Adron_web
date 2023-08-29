@@ -1,11 +1,11 @@
-import { Box, Grid, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex } from "@chakra-ui/react";
 import Link from "next/link";
 
 import DefaultLayout from '@/features/Layouts/DefaultLayout/DefaultLayout';
-import { journeys, objectives } from "@/features/Home/components/AboutUs/AboutUsConst";
+import { objectives } from "@/features/Home/components/AboutUs/AboutUsConst";
 import AgentCard from "@/features/Home/components/MeetTheTeam/components/AgentCard/AgentCard";
 import { agents } from "@/features/Home/components/MeetTheTeam/agentConst";
-import { About, SoFar } from "@/features/Home/components/AboutUs/AboutComp";
+import { About } from "@/features/Home/components/AboutUs/AboutComp";
 import CountUp from "react-countup/";
 
 
@@ -13,10 +13,11 @@ const about = () => {
 
   return (
     <DefaultLayout>
-        <Box backgroundColor="#f7f8f9" padding={{ base: "3rem", sm:"9rem"}}>
-            <Text fontSize={{ base:"30px", sm:"90px" }} fontWeight="600" mt={{ base:"90px", sm:"30px"}} textAlign="center">About Us</Text>
-            <Grid
-              templateColumns={{ base: "", sm: "repeat(3, 1fr)" }} 
+        <Box backgroundColor="#f7f8f9" padding={{ base: "3rem", md:"9rem"}}>
+            <Text fontSize={{ base:"30px", md:"90px" }} fontWeight="600" mt={{ base:"90px", md:"30px"}} textAlign="center">About Us</Text>
+            <Box
+              display={{base:"column", md: "flex"}}
+              justifyContent="space-between"
               gap="5"
               margin="auto"
               width="100%"
@@ -25,11 +26,12 @@ const about = () => {
                 {objectives.map((objective) => (
                 <About key={objective.icon} { ...objective } />
             ))}
-            </Grid>
-            <Grid
-              templateColumns={{ base: "", sm: "repeat(3, 1fr)" }} 
+            </Box>
+            <Box
+              display={{base:"column", md: "flex"}}
+              justifyContent="space-between"
               margin="auto"
-              width="60%"
+              width={{base:"100%", md:"60%"}}
               mt="90px"
             >
                <Flex flexDir="column" alignItems="center">
@@ -39,25 +41,25 @@ const about = () => {
 
                <Flex flexDir="column" alignItems="center">
                <Text fontSize="4xl" fontWeight="600"><CountUp start={9500} end={10000} duration={4}/>+</Text>
-                <Text fontSize="1.7rem" fontWeight="600" color="#8c8b8b" textAlign="center">Sold <br/> Products </Text>
+                <Text fontSize="1.7rem" fontWeight="600" color="#8c8b8b" textAlign="center">Sold Products </Text>
                </Flex>
 
                <Flex flexDir="column" alignItems="center">
                <Text fontSize="4xl" fontWeight="600">90%</Text>
-                <Text fontSize="1.7rem" fontWeight="600" color="#8c8b8b" textAlign="center">Happy <br/> Clients</Text>
+                <Text fontSize="1.7rem" fontWeight="600" color="#8c8b8b" textAlign="center">Happy Clients</Text>
                </Flex>
-            </Grid>
+            </Box>
             
-            <Box border="1px solid rgba(149, 149, 149, 0.5)" width={{ base:"100%", sm:"60%"}} margin={{ base:"5rem auto", sm:"10rem 17rem"}} />
+            <Box border="1px solid rgba(149, 149, 149, 0.5)" width={{ base:"100%", md:"60%"}} margin={{ base:"5rem auto", md:"10rem 17rem"}} />
             
             <Box width="100%">
                 <Flex display="flex" flexDirection="column-reverse" alignItems="center" mb="50px">
-                    <Text fontSize="40px" fontWeight="600" color="#1e2022">The best in the industry, at your service 24/7</Text>
+                    <Text fontSize="40px" fontWeight="600" color="#1e2022" textAlign="center">The best in the industry, at your service 24/7</Text>
                     <Text fontSize="medium" color="gray.600">OUR TEAM</Text>                  
                 </Flex>
                  
                 <Flex 
-                direction={{base:"column", sm:"row"}}
+                direction={{base:"column", md:"row"}}
                 justifyContent="space-between"
                 gap="1.5rem"
                 >
@@ -69,9 +71,9 @@ const about = () => {
             
             <Box display="flex" justifyContent="center" mt="50px">
                 <Box display="flex" flexDirection="row" gap="3" border="1px solid rgba(149, 149, 149, 0.5)" borderRadius="50rem" justifyContent="center" width="fit-content" padding="15px">
-                    <Text fontSize={{base:"12px", sm:"20px"}} fontWeight="600" color="gray.600">Want to work with us?</Text>
+                    <Text fontSize={{base:"12px", md:"20px"}} fontWeight="600" color="gray.600">Want to work with us?</Text>
                     <Link href="/contact">
-                        <Text fontSize={{base:"12px", sm:"20px"}} fontWeight="600" color="whatsapp.600" textAlign="center" gap="2" _hover={{ color: "#1e2022" }}>We are hiring</Text>
+                        <Text fontSize={{base:"12px", md:"20px"}} fontWeight="600" color="whatsapp.600" textAlign="center" gap="2" _hover={{ color: "#1e2022" }}>We are hiring</Text>
                     </Link>
                 </Box>
             </Box>

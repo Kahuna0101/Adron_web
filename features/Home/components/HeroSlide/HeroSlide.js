@@ -22,7 +22,7 @@ const HeroSlide = ({ promos }) => {
       >
         {filteredPromos.map((promo) => (
           <SwiperSlide key={promo.id}>
-            <BannerCard key={promo.title} {...promo} />
+            <BannerCard key={promo.id} {...promo} />
           </SwiperSlide>
         ))}
       </Swiper>
