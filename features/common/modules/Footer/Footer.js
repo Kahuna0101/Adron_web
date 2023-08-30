@@ -6,42 +6,52 @@ import { workWithUs, contactUs } from "./footerConsts";
 const Footer = () => {
   return (
     <>
-   <Box backgroundColor="whatsapp.600" width="100%" margin="0 auto"
-      padding={{base:"1rem 2rem", sm:"8rem 3rem"}} display={{ base:"row", sm:"column"}}>
+      <Box
+        backgroundColor="whatsapp.600"
+        width="100%"
+        margin="0 auto"
+        padding={{ base: "1rem 2rem", sm: "8rem 3rem" }}
+        display={{ base: "row", sm: "column" }}
+      >
         <SimpleGrid
           column="4"
           color="black.700"
-          gap={{ base: "1rem", sm: "3rem"}}
+          gap={{ base: "1rem", sm: "3rem" }}
           minChildWidth={{ base: "none", sm: "50px" }}
         >
-          <Flex >
+          <Flex>
             <Link href="/">
-              <img src="../logo/logo.png" alt="Adron Homes" width="150px" height="50px"/>
+              <img
+                src="../logo/logo.png"
+                alt="Adron Homes"
+                width="150px"
+                height="50px"
+              />
             </Link>
           </Flex>
           <Flex flexDirection="column">
-            <FooterHeader title="About Adron"/>
-            <FooterHeader title="Our Mission"/>
+            <FooterHeader title="About Adron" />
+            <FooterHeader title="Our Mission" />
             <FooterParagraph paragraph="We are daily driven to keep our promise of affordable housing products with a singular mission to exceed expectations." />
           </Flex>
           <Flex flexDirection="column">
-            <FooterHeader title="Contact Us"/>
+            <FooterHeader title="Contact Us" />
             <FooterParagraph paragraph="For Complaints and enquiries you can reach us on any of the numbers or visit our head office at:" />
             {contactUs.map((item) => (
-              <FooterLink key={item.name} {...item}/>
+              <FooterLink key={item.id} {...item} />
             ))}
           </Flex>
           <Flex flexDirection="column">
-            <FooterHeader title="Quick Links"/>
+            <FooterHeader title="Quick Links" />
             {workWithUs.map((item) => (
-              <FooterLink key={item.name} {...item}/>
+              <FooterLink key={item.id} {...item} />
             ))}
           </Flex>
         </SimpleGrid>
       </Box>
-      <Box 
-        backgroundColor="whatsapp.700" 
-        display="flex" 
+      <Box
+        backgroundColor="whatsapp.700"
+        display="flex"
         padding="2rem"
         justifyContent="center"
         alignItems="center"
@@ -57,36 +67,49 @@ const Footer = () => {
         <Text marginTop="1rem" fontSize="xs" textAlign="center">
           © Adron Homes. All rights reserved.
         </Text>
-   </Box>
-   </>
+      </Box>
+    </>
   );
 };
 
 export default Footer;
 
-const FooterLink = ({ name, link, icon}) => {
+const FooterLink = ({ name, link, icon }) => {
   return (
-      <Link href={link}>
-        <Flex alignItems="center" gap=".5rem" fontSize="medium" fontWeight="500" mb="1rem" color="#1e2022">
-          {icon}
-          {name}
-        </Flex>
-      </Link>
+    <Link href={link}>
+      <Flex
+        alignItems="center"
+        gap=".5rem"
+        fontSize="medium"
+        fontWeight="500"
+        mb="1rem"
+        color="#1e2022"
+      >
+        {icon}
+        {name}
+      </Flex>
+    </Link>
   );
 };
 
-const FooterHeader = ({title}) => {
+const FooterHeader = ({ title }) => {
   return (
-    <Text as="h4" fontWeight="500" fontSize="2xl" marginBottom=".5rem" color="#1e2022">
+    <Text
+      as="h4"
+      fontWeight="500"
+      fontSize="2xl"
+      marginBottom=".5rem"
+      color="#1e2022"
+    >
       {title}
     </Text>
   );
 };
 
-const FooterParagraph = ({paragraph}) => {
+const FooterParagraph = ({ paragraph }) => {
   return (
     <Text fontWeight="500" fontSize="medium" color="#fff" mb="1.5rem">
       {paragraph}
     </Text>
-  )
-}
+  );
+};

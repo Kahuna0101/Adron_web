@@ -44,7 +44,7 @@ const Hero = () => {
               background="#4ade1f"
               borderRadius="999px"
               position="relative"
-              right={{base:"-88%", md:"-57%"}}
+              right={{ base: "-88%", md: "-57%" }}
               top="50px"
               zIndex="-1"
             />
@@ -70,7 +70,7 @@ const Hero = () => {
             alignItems="center"
             width="100%"
             justifyContent="space-between"
-            flexDir={{base: "column", md: "row" }}
+            flexDir={{ base: "column", md: "row" }}
           >
             <Box
               display="flex"
@@ -112,7 +112,7 @@ const Hero = () => {
                 <CountUp end={11} />
               </Flex>
               <Text fontSize="1.1rem" color="#8c8b8b" textAlign="center">
-              Years in the <br/> Real-Estate Business
+                Years in the <br /> Real-Estate Business
               </Text>
             </Box>
           </Box>
@@ -121,7 +121,7 @@ const Hero = () => {
             width="8rem"
             fontWeight={600}
             fontSize={15}
-            display={{base:"none", md:"flex"}}
+            display={{ base: "none", md: "flex" }}
             flexDir="column"
             justifyContent="center"
             alignItems="center"
@@ -156,8 +156,8 @@ const Hero = () => {
           alignItems="center"
         >
           <Box
-            width={{base:"22rem", md:"30rem"}}
-            height={{base:"35rem", md:"45rem"}}
+            width={{ base: "22rem", md: "30rem" }}
+            height={{ base: "35rem", md: "45rem" }}
             overflow="hidden"
             borderRadius="15rem 15rem 0 0"
             border="8px solid rgba(255, 255, 255, 0.12)"
@@ -171,7 +171,7 @@ const Hero = () => {
             width="8rem"
             fontWeight={600}
             fontSize={15}
-            display={{base:"flex", md:"none"}}
+            display={{ base: "flex", md: "none" }}
             flexDir="column"
             justifyContent="center"
             alignItems="center"

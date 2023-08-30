@@ -12,14 +12,14 @@ export default function Home({ featuredProperties, promos }) {
   return (
     <DefaultLayout>
       <Hero />
-      <HeroSlide promos={promos}/>
+      <HeroSlide promos={promos} />
       <FeaturedProperties featuredProperties={featuredProperties} />
       <AboutUs />
       <MeetTheTeam />
       <Testimonials />
     </DefaultLayout>
   );
-};
+}
 
 export async function getStaticProps() {
   const featuredPropertiesData = await getProperties(5);
@@ -32,4 +32,4 @@ export async function getStaticProps() {
     },
     revalidate: 60,
   };
-};
+}

@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+} from "@chakra-ui/react";
 import Link from "next/link";
 import { navigationLinks } from "../../navigationConsts";
 
@@ -27,7 +35,12 @@ const NavigationMobile = () => {
       <Flex alignItems="center" justifyContent="space-between">
         <Link href="/">
           <Box display="flex" alignItems="center" justifyContent="flex-start">
-            <img src="../logo/logo.png" alt="Adron Homes" width="90px" height="20px" />
+            <img
+              src="../logo/logo.png"
+              alt="Adron Homes"
+              width="90px"
+              height="20px"
+            />
           </Box>
         </Link>
         <Menu>
@@ -44,7 +57,11 @@ const NavigationMobile = () => {
               </MenuButton>
               <MenuList>
                 {navigationLinks.map((item) => (
-                  <NavigationLink key={item.title} {...item} onClick={handleMenuClose} />
+                  <NavigationLink
+                    key={item.id}
+                    {...item}
+                    onClick={handleMenuClose}
+                  />
                 ))}
               </MenuList>
             </>
@@ -60,7 +77,12 @@ export default NavigationMobile;
 const NavigationLink = ({ title, link, onClick }) => {
   return (
     <Link href={link}>
-      <MenuItem alignItems="center" gap="0.5rem" fontWeight="600" onClick={onClick}>
+      <MenuItem
+        alignItems="center"
+        gap="0.5rem"
+        fontWeight="600"
+        onClick={onClick}
+      >
         {title}
       </MenuItem>
     </Link>

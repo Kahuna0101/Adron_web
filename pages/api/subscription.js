@@ -1,39 +1,39 @@
-import nodemailer from "nodemailer"
+import nodemailer from "nodemailer";
 
-export default async function ContactAPI (req, res) {
-    const { 
-        firstname,
-        lastname,
-        email,
-        phone,
-        estate,
-        numberOfPlots,
-        message,
-        refName,
-        refPhone 
-    } = req.body;
-    const subscriber = req.body.subscriber;
-    const contactMethod = req.body.contactMethod;
+export default async function ContactAPI(req, res) {
+  const {
+    firstname,
+    lastname,
+    email,
+    phone,
+    estate,
+    numberOfPlots,
+    message,
+    refName,
+    refPhone,
+  } = req.body;
+  const subscriber = req.body.subscriber;
+  const contactMethod = req.body.contactMethod;
 
-    const user = process.env.EMAIL_USER;
+  const user = process.env.EMAIL_USER;
 
-    const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
-        auth: {
-            user: user,
-            pass: process.env.EMAIL_PASSWORD,
-        },
-    });
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: user,
+      pass: process.env.EMAIL_PASSWORD,
+    },
+  });
 
-    try {
-        const mail = await transporter.sendMail({
-            from: `AdronHomes 🏡 <${user}>`,
-            to: user,
-            replyTo: email,
-            subject: `Subscription Form Submission By ${firstname} ${lastname}`,
-            html:`
+  try {
+    const mail = await transporter.sendMail({
+      from: `AdronHomes 🏡 <${user}>`,
+      to: user,
+      replyTo: email,
+      subject: `Subscription Form Submission By ${firstname} ${lastname}`,
+      html: `
             <div style="width: 100%; background-color: #f3f9ff; padding: 5rem 0">
                 <div style="max-width: 700px; background-color: white; margin: 0 auto">
                     <div style="width: 100%; background-color: green; padding: 20px 0">
@@ -63,13 +63,17 @@ export default async function ContactAPI (req, res) {
                 </div>
             </div>
             `,
-        });
+    });
 
-        console.log("Message sent:", mail.messageId);
+    console.log("Message sent:", mail.messageId);
 
-        return res.status(200).json({ message: "success"}) 
-    } catch (error) {
-        console.log(error)
-        res.status(500).json({ message: "Could not send the email. Your message was not sent." });
-    }
+    return res.status(200).json({ message: "success" });
+  } catch (error) {
+    console.log(error);
+    res
+      .status(500)
+      .json({
+        message: "Could not send the email. Your message was not sent.",
+      });
+  }
 }

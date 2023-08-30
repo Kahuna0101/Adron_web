@@ -23,7 +23,6 @@ import {
 import { useForm } from "react-hook-form";
 import { estates } from "./EstatesConst";
 import Link from "next/link";
-import Properties from "@/pages/properties";
 
 const SubscriptionForm = () => {
   const {
@@ -101,6 +100,7 @@ const SubscriptionForm = () => {
         // Render the form when isSubmitted is false
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormControl>
+            <img src='./subscribe/subscribe.png' alt='Subscribe' height="90px" width="90px"/>
             <Text
               fontSize={{ base: "20px", sm: "40px" }}
               fontWeight="600"
@@ -167,7 +167,7 @@ const SubscriptionForm = () => {
                 <FormLabel>Estate Interested in</FormLabel>
                 <Select placeholder="Estate" mt={2} {...register("estate")}>
                   {estates.map((item) => (
-                    <option key={item.name} value={item.value}>
+                    <option key={item.id} value={item.value}>
                       {item.name}
                     </option>
                   ))}

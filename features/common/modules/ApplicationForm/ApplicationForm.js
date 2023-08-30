@@ -1,3 +1,5 @@
+// This form is for the subscriber page which is not enabled yet
+
 import { Box, Button, FormControl, Input, Text, Textarea, Tooltip } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { HiQuestionMarkCircle } from "react-icons/hi2";

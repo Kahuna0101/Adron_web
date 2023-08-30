@@ -6,14 +6,9 @@ import React from 'react'
 const subscribe = () => {
   return (
     <DefaultLayout>
-          <Box backgroundColor="#f7f8f9" padding={{ base: "3rem", md:"15rem"}}>
-            <Box>
-
-            </Box>
-            <Box>
-                <SubscriptionForm />
-            </Box>
-        </Box>
+      <Box backgroundColor="#f7f8f9" padding={{ base: "3rem", md:"15rem"}}>
+        <SubscriptionForm />
+      </Box>
     </DefaultLayout>
   )
 }

@@ -1,6 +1,6 @@
 export const navigationLinks = [
-    {title:'Properties', link:"/properties"},
-    {title:'Blogs', link: "/blogs"},
-    {title:'Contact', link:"/contact"},
-    {title:'About Us', link:"/about" },
+    {id:1, title:'Properties', link:"/properties"},
+    {id:2, title:'Blogs', link: "/blogs"},
+    {id:3, title:'Contact', link:"/contact"},
+    {id:4, title:'About Us', link:"/about" },
 ];
