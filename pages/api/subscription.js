@@ -37,9 +37,7 @@ export default async function ContactAPI(req, res) {
             <div style="width: 100%; background-color: #f3f9ff; padding: 5rem 0">
                 <div style="max-width: 700px; background-color: white; margin: 0 auto">
                     <div style="width: 100%; background-color: green; padding: 20px 0">
-                    <a href="${process.env.CLIENT_URL}">
-                        <img src="https://res.cloudinary.com/daamcwt3y/image/upload/v1693341349/logo_n24gyg.jpg" alt="AdronHomes" style="width: 100%; height: 70px; object-fit: contain" />
-                    </a>
+                      <img src="https://res.cloudinary.com/daamcwt3y/image/upload/v1693341349/logo_n24gyg.jpg" alt="AdronHomes" style="width: 100%; height: 70px; object-fit: contain" />
                     </div>
 
                     <div style="width: 100%; gap: 10px; padding: 30px 0; display: grid">
