@@ -1,4 +1,4 @@
-import clientPromise from "@/lib/mongodb";
+import clientPromise from "@/libs/mongodb";
 import { ObjectId } from "mongodb";
 
 export const getProperties = async () => {

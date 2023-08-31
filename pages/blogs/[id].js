@@ -2,7 +2,7 @@ import DefaultLayout from "@/features/Layouts/DefaultLayout/DefaultLayout";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
-import { usePostFormat } from "../../features/common/Hooks/usePostFormat";
+import { usePostFormat } from "@/features/common/Hooks/usePostFormat";
 import { getPost } from "../api/blogs";
 
 const BlogSingle = ({ post }) => {
