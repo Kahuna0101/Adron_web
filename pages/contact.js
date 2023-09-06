@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
+import { Box, Grid, GridItem, SimpleGrid, Text } from "@chakra-ui/react";
 
 import ContactForm from "@/features/common/modules/ContactForm";
 import {
@@ -85,8 +85,8 @@ const ContactPage = () => {
           >
             Office Locations
           </Text>
-          <Grid
-            templateColumns={{ base: "", md: "repeat(3, 1fr)" }}
+          <SimpleGrid
+            columns={{ sm: "1", md: "2", lg:"3" }}
             gap="5"
             margin="auto"
             width="100%"
@@ -95,7 +95,7 @@ const ContactPage = () => {
             {locations.map((location) => (
               <ContactLocation key={location.id} {...location} />
             ))}
-          </Grid>
+          </SimpleGrid>
         </Box>
       </Box>
     </DefaultLayout>

@@ -1,3 +1,5 @@
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+
 import { HiPhoneArrowUpRight } from "react-icons/hi2";
 import { MdLocationOn, MdEmail } from "react-icons/md";
 
@@ -40,3 +42,10 @@ export const workWithUs = [
   { id: 3, name: "Contact", link: "/contact" },
   { id: 4, name: "Blog", link: "/blog" },
 ];
+
+export const socialLink = [
+  { href: "https://www.facebook.com/AdronHomesOfficial", icon: <FaFacebook />, alt: "facebook logo" },
+  { href: "https://www.twitter.com/AdronHomes", icon: <FaTwitter />, alt: "twitter logo" },
+  { href: "https://www.instagram.com/adronhomesofficial", icon: <FaInstagram />, alt: "instagram logo" },
+  { href: "https://www.youtube.com/@adronhomesofficial5941", icon: <FaYoutube />, alt: "youtube logo" },
+]

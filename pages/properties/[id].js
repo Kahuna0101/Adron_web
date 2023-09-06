@@ -9,7 +9,6 @@ import { TbMapPin } from 'react-icons/tb';
 import { getProperty } from '../api/properties';
 import DefaultLayout from '@/features/Layouts/DefaultLayout/DefaultLayout';
 import AdditionalFees from '@/features/Property/components/AdditionalFees/AdditionalFees';
-import Amenities from '@/features/Property/components/Amenities/Amenities';
 
 
 const PropertySingle = ( { property }) => {
@@ -105,9 +104,6 @@ const PropertySingle = ( { property }) => {
                 {description}
               </Text>
             </TextContentBox>
-
-            <Amenities />
-            
           </GridItem>
           </Grid>
 

@@ -10,14 +10,17 @@ import HeroSlide from "@/features/Home/components/HeroSlide/HeroSlide";
 
 export default function Home({ featuredProperties, promos }) {
   return (
-    <DefaultLayout>
+    <>
+     <DefaultLayout>
       <Hero />
       <HeroSlide promos={promos} />
       <FeaturedProperties featuredProperties={featuredProperties} />
       <AboutUs />
       <MeetTheTeam />
       <Testimonials />
-    </DefaultLayout>
+      </DefaultLayout>   
+    </>
+
   );
 }
 

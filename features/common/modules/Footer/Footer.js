@@ -1,7 +1,7 @@
 import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { HiHomeModern } from "react-icons/hi2";
-import { workWithUs, contactUs } from "./footerConsts";
+import { workWithUs, contactUs, socialLink } from "./footerConsts";
 
 const Footer = () => {
   return (
@@ -19,7 +19,7 @@ const Footer = () => {
           gap={{ base: "1rem", sm: "3rem" }}
           minChildWidth={{ base: "none", sm: "50px" }}
         >
-          <Flex>
+          <Flex flexDir="column">
             <Link href="/">
               <img
                 src="../logo/logo.png"
@@ -28,6 +28,15 @@ const Footer = () => {
                 height="50px"
               />
             </Link>
+            <Box display="flex" mt={5} gap={3} px={1}>
+              {socialLink.map((social) => (
+                <Box backgroundColor="white" padding={2} borderRadius="full" color="green.500">
+                <Link href={social.href} key={social.alt} target="_blank">
+                  {social.icon}
+                </Link>
+                </Box>
+              ))}
+            </Box>
           </Flex>
           <Flex flexDirection="column">
             <FooterHeader title="About Adron" />

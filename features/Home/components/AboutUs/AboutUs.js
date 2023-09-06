@@ -38,7 +38,7 @@ const AboutUs = () => {
               the answers to all your questions about an area, or ask the
               locals.
             </Text>
-            <Flex flexDirection={{ base: "column", md: "row" }} mt="6" gap="3">
+            <Flex flexDirection={{ base: "column", xl: "row" }} mt="6" gap="3">
               {abouts.map((about) => (
                 <AboutCard key={about.id} {...about} />
               ))}

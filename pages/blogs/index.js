@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, SimpleGrid } from "@chakra-ui/react";
 
 import DefaultLayout from "@/features/Layouts/DefaultLayout";
 import { getPosts } from "../api/blogs";
@@ -14,15 +14,14 @@ const Blogs = ({ posts }) => {
             {!posts.length ? "There are no Posts" : "Blogs & News"}
           </Text>
 
-          <Box
-            display="flex"
-            flexDir={{ base: "column", md: "row" }}
-            gap={{ base: "0", md: "2rem" }}
+          <SimpleGrid 
+            columns={{base:"1", md:"3"}}
+            gap={{base:"0", md:"2rem"}}
           >
             {posts.map((post) => (
               <PostCard key={post.id} {...post} />
             ))}
-          </Box>
+          </SimpleGrid>
         </Box>
       </Box>
     </DefaultLayout>

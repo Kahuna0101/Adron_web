@@ -2,7 +2,7 @@ import { Box, Text } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 
 const WordAnimation = () => {
-  const words = ["Cities,", "Communities,", "and Homes."];
+  const words = ["Cities", "Communities", "Homes."];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState(words[0]); // Initialize currentWord with the first word
 
@@ -21,9 +21,9 @@ const WordAnimation = () => {
   }, [currentIndex, words]);
 
   return (
-    <Box fontSize={{ base: "30px", sm: "60px" }}>
-      <Text display="flex" flexDir="column" fontWeight="600" textAlign="center">
-        ...Building
+    <Box fontSize={{ base: "45px", md: "80px" }} lineHeight={{base:"3rem", md:"5rem"}}>
+      <Text display="flex" flexDir="column" fontWeight="600">
+        Building
       </Text>
       <Text color="gray.500" fontStyle="italic" fontWeight="450">
         {currentWord}

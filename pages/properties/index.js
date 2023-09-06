@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Flex, Text, Input, Select } from "@chakra-ui/react";
+import { Box, Button, Flex, Text, Input, Select, SimpleGrid } from "@chakra-ui/react";
 
 import { getProperties } from "../api/properties/index";
 import PropertyCard from "@/features/common/modules/PropertyCard";
@@ -82,21 +82,20 @@ const Properties = ({properties}) => {
                             value={selected}
                             onChange={(e) => setSelected(e.target.value)}
                         >
-                            {['All', 'Lands', 'Houses'].map((type) => (
+                            {['All', 'Land', 'House'].map((type) => (
                             <option key={type} value={type.toLowerCase()}>{type}</option>
                             ))}
                         </Select>
                     </Flex>
 
-                    <Box 
-                        display="flex"
-                        flexDir={{ base: "column", md:"row"}}
+                    <SimpleGrid 
+                        columns={{base:"1", md:"3"}}
                         gap={{base:"0", md:"2rem"}}
                     >
                         {sortedProperties.map((property) => (
                             <PropertyCard key={property.id} {...property}/>
                         ))}
-                    </Box>
+                    </SimpleGrid>
 
                 </Box>
             </Box>

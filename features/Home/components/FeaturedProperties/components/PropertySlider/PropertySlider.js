@@ -2,9 +2,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import PropertyCard from "@/features/common/modules/PropertyCard";
+
+import PropertyCard from "@/features/common/modules/PropertyCard/PropertyCard";
 import { useIsDesktop } from "@/features/common/Hooks/useIsDesktop";
 
 const PropertySlider = ({ featuredProperties }) => {
@@ -16,6 +16,7 @@ const PropertySlider = ({ featuredProperties }) => {
       loop={true}
       centeredSlides={true}
       autoplay={{ delay: 2000, disableOnInteraction: true }}
+      breakpoints={false}
       pagination={{ dynamicBullets: true }}
       modules={[Autoplay, Pagination]}
       className="mySwiper"
@@ -30,3 +31,9 @@ const PropertySlider = ({ featuredProperties }) => {
 };
 
 export default PropertySlider;
+
+
+{/* 
+
+
+*/}

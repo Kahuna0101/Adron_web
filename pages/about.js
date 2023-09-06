@@ -1,4 +1,4 @@
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, SimpleGrid } from "@chakra-ui/react";
 import Link from "next/link";
 
 import DefaultLayout from "@/features/Layouts/DefaultLayout/DefaultLayout";
@@ -84,8 +84,8 @@ const about = () => {
 
         <Box
           border="1px solid rgba(149, 149, 149, 0.5)"
-          width={{ base: "100%", md: "60%" }}
-          margin={{ base: "5rem auto", md: "10rem 17rem" }}
+          width={{ sm: "100%", md:"80%", lg: "60%" }}
+          margin={{ sm: "5rem auto", md:"7rem 5rem", lg: "10rem 17rem" }}
         />
 
         <Box width="100%">
@@ -108,15 +108,15 @@ const about = () => {
             </Text>
           </Flex>
 
-          <Flex
-            direction={{ base: "column", md: "row" }}
-            justifyContent="space-between"
-            gap="1.5rem"
+          <SimpleGrid 
+          columns="3"
+          minChildWidth="300px"
+          gap={{ base: "0.5rem", sm: "2.5rem" }}
           >
             {agents.map((agent) => (
               <AgentCard key={agent.id} {...agent} />
             ))}
-          </Flex>
+          </SimpleGrid>
         </Box>
 
         <Box display="flex" justifyContent="center" mt="50px">

@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, SimpleGrid } from "@chakra-ui/react";
 
 import { agents } from "./agentConst";
 import AgentCard from "./components/AgentCard";
@@ -26,16 +26,15 @@ const MeetTheTeam = () => {
         >
           The best in the industry, at your service 24/7
         </Text>
-        <Box
-          display="flex"
-          flexDirection={{ base: "column", md: "row" }}
-          justifyContent="space-between"
-          gap="1.5rem"
+        <SimpleGrid
+          columns="3"
+          minChildWidth="300px"
+          gap={{ base: "0.5rem", sm: "2.5rem" }}
         >
           {agents.map((agent) => (
-            <AgentCard key={agent.name} {...agent} />
+            <AgentCard key={agent.id} {...agent} />
           ))}
-        </Box>
+        </SimpleGrid>
       </Box>
     </Box>
   );

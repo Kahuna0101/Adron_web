@@ -3,6 +3,7 @@ import React from "react";
 import { home1 } from "./HeroConst";
 import CountUp from "react-countup";
 import { ArrowDownIcon } from "@chakra-ui/icons";
+import WordAnimation from "./WordAnimation";
 
 const Hero = () => {
   return (
@@ -35,22 +36,23 @@ const Hero = () => {
           flexDir="column"
           justifyContent="center"
           alignItems="flex-start"
-          gap="3rem"
+          gap="2rem"
         >
           <Box position="relative" zIndex="1">
             <Box
-              height="4rem"
-              width="4rem"
+              height={{ base:"3rem", md:"4rem"}}
+              width={{ base:"3rem", md:"4rem"}}
               background="#4ade1f"
               borderRadius="999px"
               position="relative"
-              right={{ base: "-88%", md: "-57%" }}
-              top="50px"
+              right={{ base: "-58%", md: "-58%" }}
+              top={{ base:"44px", md:"73px"}}
               zIndex="-1"
             />
-            <Text fontWeight={600} fontSize="4.8rem" lineHeight="5rem">
-              Discover <br /> Most Suitable <br /> Property
+            <Text fontWeight={600} fontSize={{ base:"45px", md:"80px"}} lineHeight={{base:"3rem", md:"5rem"}}>
+              At Adron <br />Homes We're
             </Text>
+            <WordAnimation />
           </Box>
 
           <Box
@@ -61,8 +63,7 @@ const Hero = () => {
             fontSize="1.1rem"
             color="grey"
           >
-            <Text>Find a variety of properties that suit you very easily</Text>
-            <Text>Forget all difficulties in finding a residence for you</Text>
+            <Text textAlign="center">Find a variety of properties that suit you very easily</Text>
           </Box>
 
           <Box
@@ -121,15 +122,15 @@ const Hero = () => {
             width="8rem"
             fontWeight={600}
             fontSize={15}
-            display={{ base: "none", md: "flex" }}
+            display="flex"
             flexDir="column"
             justifyContent="center"
             alignItems="center"
             background="#4ade1f"
             borderRadius="9px"
             position="relative"
-            right="-87%"
-            top="109px"
+            right={{base:"-30%", md:"-40%", lg:"-87%"}}
+            top={{base:"107vh", md:"98vh", lg:"109px"}}
             animation="bounce 2s infinite"
             sx={{
               "@keyframes bounce": {
@@ -166,34 +167,6 @@ const Hero = () => {
             backgroundRepeat="no-repeat"
             backgroundPosition="center"
           />
-          <Box
-            height="3rem"
-            width="8rem"
-            fontWeight={600}
-            fontSize={15}
-            display={{ base: "flex", md: "none" }}
-            flexDir="column"
-            justifyContent="center"
-            alignItems="center"
-            background="#4ade1f"
-            borderRadius="9px"
-            position="relative"
-            top="39px"
-            animation="bounce 2s infinite"
-            sx={{
-              "@keyframes bounce": {
-                "0%, 100%": {
-                  transform: "translateY(0)",
-                },
-                "50%": {
-                  transform: "translateY(-20px)",
-                },
-              },
-            }}
-          >
-            PROMOS
-            <ArrowDownIcon fontSize={18} />
-          </Box>
         </Box>
       </Box>
     </Box>
