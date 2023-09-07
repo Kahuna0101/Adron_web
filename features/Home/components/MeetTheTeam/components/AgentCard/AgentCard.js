@@ -28,18 +28,18 @@ const AgentCard = ({ name, image, description, title, social}) => {
           marginBottom="2rem"
           shadow="md"
         />
-          <Text 
-            fontSize="lg"
-            color="whatsapp.600"
-          >
-            {title}
-          </Text>
           <Text
             color="whatsapp.400"
             fontSize="xl"
             fontWeight="bold"
           >
             {name}
+          </Text>
+          <Text 
+            fontSize="lg"
+            color="whatsapp.600"
+          >
+            {title}
           </Text>
           <Text
             fontSize="md"
