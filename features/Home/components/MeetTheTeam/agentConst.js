@@ -26,7 +26,7 @@ export const agents = [
       id:2,
       name: "Olori Aderonke EmmanuelKing",
       title: "Executive Director Finance, Budget Planning and Administration",
-      image: "./agents/agent2.jpg",
+      image: "./agents/agent2.jpeg",
       social: [
         {
           icon:<TbBrandFacebook />,
