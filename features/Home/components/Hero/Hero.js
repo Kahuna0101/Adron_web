@@ -117,35 +117,6 @@ const Hero = () => {
               </Text>
             </Box>
           </Box>
-          <Box
-            height="3rem"
-            width="8rem"
-            fontWeight={600}
-            fontSize={15}
-            display="flex"
-            flexDir="column"
-            justifyContent="center"
-            alignItems="center"
-            background="#4ade1f"
-            borderRadius="9px"
-            position="relative"
-            right={{base:"-30%", md:"-40%", lg:"-87%"}}
-            top={{base:"107vh", md:"98vh", lg:"109px"}}
-            animation="bounce 2s infinite"
-            sx={{
-              "@keyframes bounce": {
-                "0%, 100%": {
-                  transform: "translateY(0)",
-                },
-                "50%": {
-                  transform: "translateY(-20px)",
-                },
-              },
-            }}
-          >
-            PROMOS
-            <ArrowDownIcon fontSize={18} />
-          </Box>
         </Box>
 
         {/*Right side*/}
@@ -167,7 +138,36 @@ const Hero = () => {
             backgroundRepeat="no-repeat"
             backgroundPosition="center"
           />
-        </Box>
+
+          <Box
+            height="3rem"
+            width="8rem"
+            fontWeight={600}
+            fontSize={15}
+            display="flex"
+            flexDir="column"
+            justifyContent="center"
+            alignItems="center"
+            background="#4ade1f"
+            borderRadius="9px"
+            position="relative"
+            right={{base:"-1%", md:"50%"}}
+            animation="bounce 2s infinite"
+            sx={{
+              "@keyframes bounce": {
+                "0%, 100%": {
+                  transform: "translateY(0)",
+                },
+                "50%": {
+                  transform: "translateY(-20px)",
+                },
+              },
+            }}
+          >
+            PROMOS
+            <ArrowDownIcon fontSize={18} />
+          </Box>
+        </Box>       
       </Box>
     </Box>
   );
