@@ -23,6 +23,7 @@ import {
 import { useForm } from "react-hook-form";
 import { estates } from "./EstatesConst";
 import Link from "next/link";
+import Image from "next/image";
 
 const SubscriptionForm = () => {
   const {
@@ -57,7 +58,6 @@ const SubscriptionForm = () => {
   return (
     <Box
       width="100%"
-      mt="40px"
       fontSize="20px"
       color="#1e2022"
       p={6}
@@ -100,7 +100,7 @@ const SubscriptionForm = () => {
         // Render the form when isSubmitted is false
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormControl>
-            <img src='./subscribe/subscribe.png' alt='Subscribe' height="90px" width="90px"/>
+            <Image src='/subscribe/subscribe.png' alt='Subscribe' height={90} width={90}/>
             <Text
               fontSize={{ base: "20px", sm: "40px" }}
               fontWeight="600"

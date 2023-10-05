@@ -2,6 +2,7 @@ import AboutCard from "@/features/common/modules/AboutCard";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { hero } from "../Hero/HeroConst";
 import { abouts } from "./AboutUsConst";
+import Image from "next/image";
 
 const AboutUs = () => {
   return (
@@ -27,11 +28,11 @@ const AboutUs = () => {
               mt="0"
               mb=".5rem"
               lineHeight="1.4"
-              color="#1e2022"
+              color={{base:"#fff", md:"#1e2022"}}
             >
               Adron Homes helps you make better property decisions
             </Text>
-            <Text fontSize="medium" color="gray.500">
+            <Text fontSize="medium" fontWeight="bold" color={{base:"#fff", md:"gray.500"}}>
               Adron has Nigeria's largest collection of exquisite estates,
               empowering you to find the right area for you to move to. With
               tens of thousands of local community topics and discussions, find
@@ -49,17 +50,19 @@ const AboutUs = () => {
 
       <Box
         position="absolute"
-        backgroundImage={hero}
         top="0"
         right="0"
-        width="40%"
+        width={{base:"100%", md:"50%"}}
         height="100%"
         backgroundSize="cover"
-        backgroundRepeat="no-repeat"
-        backgroundPosition="top center"
         zIndex="-1"
-        display={{ base: "none", md: "initial" }}
+      >
+      <Image 
+        src='/hero/hero2.jpeg'
+        alt="Adron Monument"
+        fill={true}
       />
+      </Box>
     </Box>
   );
 };

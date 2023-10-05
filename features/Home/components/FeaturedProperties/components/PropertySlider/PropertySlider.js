@@ -31,9 +31,3 @@ const PropertySlider = ({ featuredProperties }) => {
 };
 
 export default PropertySlider;
-
-
-{/* 
-
-
-*/}

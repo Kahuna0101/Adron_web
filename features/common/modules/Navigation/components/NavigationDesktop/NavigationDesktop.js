@@ -2,6 +2,7 @@ import { Box, Button, Flex } from "@chakra-ui/react";
 import Link from "next/link";
 
 import { navigationLinks } from "../../navigationConsts";
+import Image from "next/image";
 
 const NavigationDesktop = () => {
   return (
@@ -10,22 +11,21 @@ const NavigationDesktop = () => {
       display={{ base: "none", md: "block" }}
       alignItems="center"
       width="100%"
-      justifyContent="space-between"
       boxShadow="0 0 20px rgba(168, 168, 168, 0.15)"
       position="fixed"
       zIndex="2"
       padding="1rem 3rem"
     >
       <Box width="100%" margin="0 auto">
-        <Flex alignItems="center" justifyContent="space-between">
+        <Flex alignItems="center" gap="27rem">
           <Link href="/">
             <Box display="flex" alignItems="center">
-              <img
-                src="../logo/logo.png"
+              <Image 
+                src="/logo/logo.png"
                 alt="Adron Homes"
-                width="90px"
-                height="20px"
-                color="#45b82b"
+                width={90}
+                height={20}
+                style={{color:"#45b82b"}}
               />
             </Box>
           </Link>
@@ -45,19 +45,6 @@ const NavigationDesktop = () => {
               </Button>
             ))}
           </Box>
-          <Flex gap="2" fontWeight="medium">
-            <Button
-              as={Link}
-              href="/subscribe"
-              marginLeft="230px"
-              padding="1.5rem"
-              colorScheme="whatsapp"
-              fontSize="1rem"
-              fontWeight="600"
-            >
-              Take Action!
-            </Button>
-          </Flex>
         </Flex>
       </Box>
     </Box>

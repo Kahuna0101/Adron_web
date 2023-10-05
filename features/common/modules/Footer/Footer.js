@@ -2,10 +2,11 @@ import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { HiHomeModern } from "react-icons/hi2";
 import { workWithUs, contactUs, socialLink } from "./footerConsts";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <>
+    <footer>
       <Box
         backgroundColor="whatsapp.600"
         width="100%"
@@ -21,11 +22,11 @@ const Footer = () => {
         >
           <Flex flexDir="column">
             <Link href="/">
-              <img
-                src="../logo/logo.png"
+              <Image 
+                src="/logo/logo.png"
                 alt="Adron Homes"
-                width="150px"
-                height="50px"
+                width={150}
+                height={50}
               />
             </Link>
             <Box display="flex" mt={5} gap={3} px={1}>
@@ -77,7 +78,7 @@ const Footer = () => {
           © Adron Homes. All rights reserved.
         </Text>
       </Box>
-    </>
+    </footer>
   );
 };
 

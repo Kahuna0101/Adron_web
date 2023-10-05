@@ -10,6 +10,8 @@ import {
   MenuList,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import Image from "next/image";
+
 import { navigationLinks } from "../../navigationConsts";
 
 const NavigationMobile = () => {
@@ -35,12 +37,12 @@ const NavigationMobile = () => {
       <Flex alignItems="center" justifyContent="space-between">
         <Link href="/">
           <Box display="flex" alignItems="center" justifyContent="flex-start">
-            <img
-              src="../logo/logo.png"
+            <Image 
+              src="/logo/logo.png"
               alt="Adron Homes"
-              width="90px"
-              height="20px"
-            />
+              width={90}
+              height={20}
+              />
           </Box>
         </Link>
         <Menu>

@@ -1,14 +1,14 @@
 import { Box, Text, Flex } from "@chakra-ui/react";
 import React from "react";
-import { home1 } from "./HeroConst";
+
 import CountUp from "react-countup";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import WordAnimation from "./WordAnimation";
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <Box
-      position="relative"
       color="white"
       paddingBottom="2rem"
       backgroundColor="#131110"
@@ -128,16 +128,19 @@ const Hero = () => {
           alignItems="center"
         >
           <Box
+            position="relative"
             width={{ base: "22rem", md: "30rem" }}
             height={{ base: "35rem", md: "45rem" }}
             overflow="hidden"
             borderRadius="15rem 15rem 0 0"
             border="8px solid rgba(255, 255, 255, 0.12)"
-            backgroundImage={home1}
-            backgroundSize="cover"
-            backgroundRepeat="no-repeat"
-            backgroundPosition="center"
-          />
+          >
+            <Image 
+              src="/home1.jpeg"
+              alt="Hero"
+              fill={true}
+            />  
+          </Box>
 
           <Box
             height="3rem"

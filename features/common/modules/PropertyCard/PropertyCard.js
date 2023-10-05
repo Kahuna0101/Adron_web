@@ -4,6 +4,7 @@ import { FaRulerCombined, FaStar, FaBed, FaBath } from "react-icons/fa";
 
 import Link from "next/link";
 import { MdLocationPin } from "react-icons/md";
+import Image from "next/image";
 
 const PropertyCard = (property) => {
   const {
@@ -21,7 +22,7 @@ const PropertyCard = (property) => {
 
   return (
     <Box
-      marginBottom="4rem"
+      marginBottom="2rem"
       backgroundColor="#fff"
       boxShadow="0 0 20px rgba(225, 225, 225, 0.7)"
       borderRadius="10px"
@@ -29,16 +30,18 @@ const PropertyCard = (property) => {
     >
       <Link href={`/properties/${id}`}>
         <Box
-          backgroundImage={`url("${coverPhoto}")`}
           height="250px"
-          backgroundPosition="center center"
-          backgroundSize="cover"
+          backgroundSize="contain"
           position="relative"
-          display="flex"
-          flexDirection="column"
           justifyContent="space-between"
           borderRadius="10px"
         >
+          <Image 
+            src={coverPhoto}
+            alt={title}
+            fill
+          />
+          <Box position="absolute" width="full" height="container.lg">
           <Box margin="1rem">
             <Badge
               colorScheme={propertyStatus === "for-sale" ? "green" : "red"}
@@ -49,25 +52,27 @@ const PropertyCard = (property) => {
           </Box>
 
           <Box
-            height="50%"
+            justifyContent="flex-end"
             bgGradient="linear(to-t, #0a0b1cd9, #ffffff00 100%)"
             display="flex"
-            alignItems="flex-end"
             padding="1rem"
+            mt="8.5rem"
           >
             <Text fontSize="3xl" fontWeight="600" color="whiteAlpha.800">
               {price}
             </Text>
           </Box>
+          </Box>
         </Box>
 
-        <Box padding="1.5rem">
+        <Box padding="1.5rem" height="30vh">
           <Text
             fontSize="xl"
             fontWeight="600"
             marginBottom="1rem"
             textTransform="uppercase"
             _hover={{ color: "#34D399" }}
+            noOfLines={1}
           >
             {title}
           </Text>
@@ -82,10 +87,10 @@ const PropertyCard = (property) => {
               <Text
                 fontWeight="500"
                 fontSize="md"
-                isTruncated
                 display="flex"
                 alignItems="center"
                 gap="2"
+                textTransform="uppercase"
               >
                 {" "}
                 {address}

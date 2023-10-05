@@ -2,17 +2,23 @@ import { Box, Button } from "@chakra-ui/react";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 import { usePostFormat } from "../../Hooks/usePostFormat";
+import Image from "next/image";
 
 const BannerCard = (post) => {
   const { id, photo } = usePostFormat(post);
 
   return (
     <Box
-      backgroundImage={photo}
-      backgroundSize="cover"
+      position="relative"
+      backgroundSize="contain"
       minHeight="100vh"
       backgroundPosition="center"
     >
+      <Image 
+        src={photo}
+        alt="Promos"
+        fill={true}
+      />
       <Box
         display="flex"
         flexDirection={{ base: "column", sm: "row" }}

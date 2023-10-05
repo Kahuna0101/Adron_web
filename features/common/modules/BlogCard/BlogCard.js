@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePostFormat } from "../../Hooks/usePostFormat";
 import { TbCalendarEvent } from "react-icons/tb";
 import { FaArrowRight } from "react-icons/fa";
+import Image from "next/image";
 
 const PostCard = (post) => {
   const { id, title, tags, photo, date } = usePostFormat(post);
@@ -18,16 +19,16 @@ const PostCard = (post) => {
     >
       <Link href={`/blogs/${id}`}>
         <Box
-          backgroundImage={`url("${photo}")`}
           height="250px"
-          backgroundPosition="center center"
-          backgroundSize="cover"
           position="relative"
-          display="flex"
-          flexDirection="column"
-          justifyContent="space-between"
           borderRadius="10px"
-        ></Box>
+        >
+          <Image
+           src={photo}
+           alt={title}
+           fill
+          />
+        </Box>
 
         <Box padding="1.5rem">
           <Box display="flex" justifyContent="space-between">

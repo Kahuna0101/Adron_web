@@ -7,6 +7,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { Divider } from "@chakra-ui/react";
+import Image from "next/image";
 
 const PropertyThumbnailSlider = ({ photos }) => {
   const [thumbSwiper, setThumbSwiper] = useState(null);
@@ -27,7 +28,7 @@ const PropertyThumbnailSlider = ({ photos }) => {
       >
         {photos.map((image) => (
           <SwiperSlide key={image}>
-            <img src={image} />
+            <Image src={image} alt="images" width={700} height={50} style={{ objectFit: 'contain'}}/>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -44,7 +45,7 @@ const PropertyThumbnailSlider = ({ photos }) => {
       >
         {photos.map((image) => (
           <SwiperSlide key={image}>
-            <img src={image} />
+            <Image src={image} alt="images" width={700} height={50} style={{ objectFit: 'contain'}}/>
           </SwiperSlide>
         ))}
       </Swiper>

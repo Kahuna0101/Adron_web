@@ -38,6 +38,7 @@ const about = () => {
           margin="auto"
           width={{ base: "100%", md: "60%" }}
           mt="90px"
+          mb="90px"
         >
           <Flex flexDir="column" alignItems="center">
             <Text fontSize="4xl" fontWeight="600">
@@ -88,7 +89,7 @@ const about = () => {
           margin={{ sm: "5rem auto", md:"7rem 5rem", lg: "10rem 17rem" }}
         />
 
-        <Box width="100%">
+        <Box width="100%" mt="90px">
           <Flex
             display="flex"
             flexDirection="column-reverse"
@@ -111,7 +112,7 @@ const about = () => {
           <SimpleGrid 
           columns="3"
           minChildWidth="300px"
-          gap={{ base: "0.5rem", sm: "2.5rem" }}
+          gap="2.5rem"
           >
             {agents.map((agent) => (
               <AgentCard key={agent.id} {...agent} />

@@ -1,5 +1,4 @@
 import PropertySlider from "./components/PropertySlider";
-import { IoIosArrowForward } from "react-icons/io";
 
 const { Box, Text, Button } = require("@chakra-ui/react");
 import Link from "next/link";
@@ -45,7 +44,7 @@ const FeaturedProperties = ({ featuredProperties }) => {
               alignItems="center"
               transition="transform .3s ease-in-out"
             >
-              view all properties for sale <IoIosArrowForward />
+              view all properties for sale
             </Button>
           </Link>
         </Box>

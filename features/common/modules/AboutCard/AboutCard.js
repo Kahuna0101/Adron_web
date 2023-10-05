@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
+import Image from "next/image";
 
 const AboutCard = ({ image, title, description, purpose }) => {
   const [ref, inView] = useInView({
@@ -29,7 +30,7 @@ const AboutCard = ({ image, title, description, purpose }) => {
         whileHover={{ scale: 1.1 }}
       >
         <Box width="100%" padding="1.5rem">
-          <img src={image} alt="icon" width="80px" />
+          <Image src={image} alt="icon" width={80} height={80}/>
 
           <Text fontSize="2xl" fontWeight="500" mt="3" color="#1e2022">
             {title}
@@ -38,7 +39,7 @@ const AboutCard = ({ image, title, description, purpose }) => {
             {description}
           </Text>
 
-          <Link href="./properties">
+          <Link href="/properties">
             <Button
               variant="ghost"
               gap="1"

@@ -4,6 +4,7 @@ import React from "react";
 
 import { usePostFormat } from "@/features/common/Hooks/usePostFormat";
 import { getPost } from "../api/blogs";
+import Image from "next/image";
 
 const BlogSingle = ({ post }) => {
   const { title, tags, photo, desc, date } = usePostFormat(post);
@@ -11,13 +12,14 @@ const BlogSingle = ({ post }) => {
   return (
     <DefaultLayout>
       <Box backgroundColor="#f7f8f9" padding={{ base: "1rem", md: "9rem" }}>
-        <Box width="100%" margin="0 auto" mt={{ base: "90px", md: "10px" }}>
-          <Box mt={{ base: 40, md: 8 }}>
+        <Box width="100%" margin="0 auto" mt={{ base: "30px", md: "10px" }}>
+          <Box mt={{ base: 1, md: 8 }}>
             <Box textAlign="center">
               <Text
                 fontSize={{ base: "2xl", md: "4xl" }}
                 fontWeight="700"
                 mb={3}
+                textTransform="uppercase"
               >
                 {title}
               </Text>
@@ -58,20 +60,23 @@ const BlogSingle = ({ post }) => {
             borderRadius=" 10px"
             mt={8}
           >
-            <Box
-              backgroundImage={`url("${photo}")`}
-              height="600px"
-              backgroundPosition="center center"
-              backgroundSize="cover"
-              position="relative"
-              display="flex"
-              flexDirection="column"
-              justifyContent="space-between"
-              borderRadius="10px 10px 0 0"
-            ></Box>
+            <Image
+              src={photo}
+              alt={title}
+              width={1500}
+              height={60}
+              style={{ borderRadius: "10px 10px 0  0" }}
+            />
 
             <Box p={10}>
-              <Text color="slate.400">{desc}</Text>
+              <Text
+                color="slate.400"
+                fontSize="xl"
+                fontWeight="600"
+                fontStyle="italic"
+              >
+                {desc}
+              </Text>
             </Box>
           </Box>
         </Box>

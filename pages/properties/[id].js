@@ -4,11 +4,12 @@ import PropertyMatterPortEmbed from '@/features/Property/components/PropertyMatt
 import PropertyStats from '@/features/Property/components/PropertyStats';
 import PropertyThumbnailSlider from '@/features/Property/components/PropertyThumbnailSlider';
 import PropertyYoutubeEmbed from '@/features/Property/components/PropertyYoutubeEmbed';
-import { Badge, Box, Flex, Grid, GridItem, Text } from '@chakra-ui/react';
+import { Badge, Box, Button, Flex, Grid, GridItem, Text } from '@chakra-ui/react';
 import { TbMapPin } from 'react-icons/tb';
 import { getProperty } from '../api/properties';
 import DefaultLayout from '@/features/Layouts/DefaultLayout/DefaultLayout';
 import AdditionalFees from '@/features/Property/components/AdditionalFees/AdditionalFees';
+import Link from 'next/link';
 
 
 const PropertySingle = ( { property }) => {
@@ -51,8 +52,9 @@ const PropertySingle = ( { property }) => {
             width="100%" 
             margin="0 auto"
            >
-            <GridItem colSpan="6">
-              <Text 
+            <GridItem colSpan="6" display="flex" flexDir={{ base: 'column', md: 'row' }} justifyContent="space-between">
+              <Box>
+                <Text 
                 fontSize="3xl"
                 fontWeight="medium"
                 color="whatsapp.800"
@@ -75,7 +77,8 @@ const PropertySingle = ( { property }) => {
                 </Text>
                 <Badge colorScheme="green">{propertyType}</Badge>
                 <Badge colorScheme={propertyStatus === "for-sale" ? 'green' : 'red'}>{propertyStatus}</Badge>
-              </Flex>
+                </Flex>
+              </Box>
             </GridItem>
 
 
@@ -144,6 +147,17 @@ const PropertySingle = ( { property }) => {
             </TextContentBox>
           </GridItem>
         </Grid>
+
+        <Button
+          as={Link}
+          href='/subscribe'
+          width="full"
+          colorScheme="whatsapp"
+          fontSize="1rem"
+          fontWeight="600"
+        >
+          SUBSCRIBE TODAY
+        </Button>
         </Box>
       </Box>
   </DefaultLayout>
