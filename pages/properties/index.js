@@ -87,16 +87,17 @@ const Properties = ({properties}) => {
                             ))}
                         </Select>
                     </Flex>
-
-                    <SimpleGrid 
-                        columns={{base:"1", md:"3"}}
-                        gap={{base:"0", md:"2rem"}}
-                    >
-                        {sortedProperties.map((property) => (
-                            <PropertyCard key={property.id} {...property}/>
-                        ))}
-                    </SimpleGrid>
-
+                
+                    <Box>
+                        <SimpleGrid 
+                            columns={{base:"1", md:"3"}}
+                            gap={{base:"0", md:"2rem"}}
+                        >
+                            {sortedProperties.map((property) => (
+                                <PropertyCard key={property.id} {...property}/>
+                            ))}
+                        </SimpleGrid> 
+                    </Box>
                 </Box>
             </Box>
         </Box>
