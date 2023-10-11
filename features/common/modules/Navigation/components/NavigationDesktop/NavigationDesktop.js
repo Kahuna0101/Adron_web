@@ -3,8 +3,11 @@ import Link from "next/link";
 
 import { navigationLinks } from "../../navigationConsts";
 import Image from "next/image";
+import {usePathname} from 'next/navigation';
 
 const NavigationDesktop = () => {
+  const pathname = usePathname();
+
   return (
     <Box
       as="nav"
@@ -31,20 +34,25 @@ const NavigationDesktop = () => {
             </Box>
           </Link>
           <Box display="flex" alignItems="center">
-            {navigationLinks.map((item) => (
+            {navigationLinks.map((item) => {
+              const isActive = pathname === item.link;
+              return (
               <Button
                 key={item.title}
-                variant="unstyled"
-                color="grey"
+                variant='ghost'
+                color={isActive && 'white' || "grey"}
                 padding="1.5rem"
                 fontSize="0.8rem"
                 fontWeight="medium"
                 textTransform="uppercase"
-                _hover={{ color: "whatsapp.400" }}
+                _hover={{ color: isActive && 'white' || "whatsapp.400" }}
+                backgroundColor={isActive && 'whatsapp.300'}
               >
                 <NavigationLink key={item.id} {...item} />
               </Button>
-            ))}
+              );
+            }  
+            )}
           </Box>
           <Flex gap="2" fontWeight="medium">
             <Button

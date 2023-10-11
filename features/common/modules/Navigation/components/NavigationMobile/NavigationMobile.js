@@ -11,10 +11,13 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { navigationLinks } from "../../navigationConsts";
 
 const NavigationMobile = () => {
+  const pathname = usePathname();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -37,12 +40,12 @@ const NavigationMobile = () => {
       <Flex alignItems="center" justifyContent="space-between">
         <Link href="/">
           <Box display="flex" alignItems="center" justifyContent="flex-start">
-            <Image 
+            <Image
               src="/logo/logo.png"
               alt="Adron Homes"
               width={90}
               height={20}
-              />
+            />
           </Box>
         </Link>
         <Menu>
@@ -51,20 +54,24 @@ const NavigationMobile = () => {
               <MenuButton
                 isActive={isOpen}
                 as={IconButton}
-                aria-label="options"
+                
                 borderRadius="50%"
                 onClick={handleMenuToggle}
               >
                 {isOpen ? <CloseIcon /> : <HamburgerIcon />}
               </MenuButton>
               <MenuList>
-                {navigationLinks.map((item) => (
-                  <NavigationLink
-                    key={item.id}
-                    {...item}
-                    onClick={handleMenuClose}
-                  />
-                ))}
+                {navigationLinks.map((item) => {
+                  const isActive = pathname === item.link;
+                  return (
+                    <NavigationLink
+                      key={item.id}
+                      {...item}
+                      onClick={handleMenuClose}
+                      isActive={isActive}
+                    />
+                  );
+                })}
               </MenuList>
             </>
           )}
@@ -76,17 +83,18 @@ const NavigationMobile = () => {
 
 export default NavigationMobile;
 
-const NavigationLink = ({ title, link, onClick }) => {
+const NavigationLink = ({ title, link, onClick, isActive }) => {
   return (
-    <Link href={link}>
-      <MenuItem
-        alignItems="center"
-        gap="0.5rem"
-        fontWeight="600"
-        onClick={onClick}
-      >
-        {title}
-      </MenuItem>
-    </Link>
+    <MenuItem
+      as={Link}
+      href={link}
+      alignItems="center"
+      gap="0.5rem"
+      fontWeight="600"
+      onClick={onClick}
+      backgroundColor={isActive && "whatsapp.300"}
+    >
+      {title}
+    </MenuItem>
   );
 };
