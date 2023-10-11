@@ -38,9 +38,10 @@ export const contactUs = [
 
 export const workWithUs = [
   { id: 1, name: "Home", link: "/" },
-  { id: 2, name: "About", link: "/about" },
-  { id: 3, name: "Contact", link: "/contact" },
-  { id: 4, name: "Blog", link: "/blog" },
+  { id: 2, name: "Properties", link: "/properties" },
+  { id: 3, name: "About", link: "/about" },
+  { id: 4, name: "Contact", link: "/contact" },
+  { id: 5, name: "Blog", link: "/blogs" },
 ];
 
 export const socialLink = [
